@@ -1,0 +1,29 @@
+import { Link } from "@tanstack/react-router";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
+import { technologies, contact } from "@/lib/site-data";
+import { ActionLink } from "./button";
+
+const nav = [["Solutions", "/solutions"], ["Technologies", "/technologies"], ["Products", "/products"], ["Applications", "/applications"], ["Partners", "/partners"], ["Resources", "/resources"], ["About", "/about"]] as const;
+
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  const [mega, setMega] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => { const onScroll = () => setScrolled(window.scrollY > 40); onScroll(); window.addEventListener("scroll", onScroll); return () => window.removeEventListener("scroll", onScroll); }, []);
+  return <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+    <div className="nav-shell">
+      <Link to="/" className="wordmark" aria-label="NB Instrument home"><span>NB</span><strong>INSTRUMENT</strong></Link>
+      <nav className="desktop-nav" aria-label="Primary navigation">
+        {nav.map(([label, to]) => label === "Technologies" ? <div className="mega-trigger" key={label} onMouseEnter={() => setMega(true)} onMouseLeave={() => setMega(false)}><Link to={to} onFocus={() => setMega(true)}>{label}<ChevronDown size={13}/></Link><div className={`mega-menu ${mega ? "is-open" : ""}`}><div className="mega-intro"><span className="eyebrow">Technology portfolio</span><h2>Systems selected around the research.</h2><Link to="/technologies">View all technologies ↗</Link></div><div className="mega-grid">{technologies.map((t) => <Link key={t.slug} to="/technologies/$slug" params={{ slug: t.slug }}><small>{t.number}</small><span>{t.name}</span><p>{t.summary}</p></Link>)}</div></div></div> : <Link key={label} to={to}>{label}</Link>)}
+      </nav>
+      <ActionLink to="/contact" className="nav-cta">Discuss your requirement</ActionLink>
+      <button className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
+    </div>
+    {open && <nav className="mobile-nav" aria-label="Mobile navigation">{nav.map(([label,to]) => <Link key={label} to={to} onClick={() => setOpen(false)}>{label}<span>↗</span></Link>)}<ActionLink to="/contact">Discuss your requirement</ActionLink></nav>}
+  </header>;
+}
+
+export function SiteFooter() {
+  return <footer className="site-footer"><div className="container"><div className="footer-lead"><div><div className="wordmark wordmark-footer"><span>NB</span><strong>INSTRUMENT</strong></div><h2>Technology for the questions that move research forward.</h2></div><ActionLink to="/contact" tone="light">Start a conversation</ActionLink></div><div className="footer-grid"><div><span className="eyebrow">Explore</span>{nav.slice(0,4).map(([l,t])=><Link key={l} to={t}>{l}</Link>)}</div><div><span className="eyebrow">Company</span>{nav.slice(4).map(([l,t])=><Link key={l} to={t}>{l}</Link>)}<Link to="/locations">Locations</Link><Link to="/contact">Contact</Link></div><div className="footer-contact"><span className="eyebrow">New Delhi</span><p>{contact.address}</p><a href={`mailto:${contact.email}`}>{contact.email}</a><a href={`tel:${contact.phones[0]}`}>{contact.phones[0]}</a></div></div><div className="footer-bottom"><span>© 2026 NB Instrument Pvt. Ltd.</span><span>Innovation · Commitment · Dedication</span></div></div></footer>;
+}
