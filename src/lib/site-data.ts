@@ -40,3 +40,25 @@ export const contact = {
   phones: ["011-46056867", "011-46056868"],
   email: "contact@nbinstrument.in",
 };
+
+export const partners = [
+  { slug: "sald", name: "SALD", country: "Netherlands", focus: "Spatial atomic layer deposition" },
+  { slug: "parteq", name: "ParteQ GmbH", country: "Germany", focus: "Advanced research technology" },
+  { slug: "sint-technology", name: "SINT Technology S.r.l.", country: "Italy", focus: "Measurement and materials testing" },
+  { slug: "pg-instruments", name: "P.G. Instruments Ltd.", country: "United Kingdom", focus: "Analytical instrumentation" },
+  { slug: "thesix-solutions", name: "Thesix Solutions Technology", country: "Canada", focus: "Scientific systems" },
+  { slug: "genicore", name: "GeniCore", country: "Poland", focus: "Spark plasma sintering" },
+  { slug: "nordiko", name: "Nordiko Technical Service", country: "United Kingdom", focus: "Thin-film deposition" },
+  { slug: "nippon-instruments", name: "Nippon Instruments Corporation", country: "Japan", focus: "Analytical instruments" },
+  { slug: "spinflex", name: "Spinflex Instruments", country: "Israel", focus: "ESR / EPR spectroscopy" },
+  { slug: "staton", name: "STATON", country: "Slovakia", focus: "Vacuum coating systems" },
+  { slug: "korvus-technology", name: "Korvus Technology", country: "United Kingdom", focus: "Modular deposition systems" },
+  { slug: "on-nano", name: "ON NANO", country: "International", focus: "Nanotechnology systems" },
+];
+
+export const resourceCategories = [
+  { slug: "articles", name: "Technical Articles", description: "Perspectives on scientific processes, instrument selection and laboratory capability." },
+  { slug: "application-notes", name: "Application Notes", description: "Application-led guidance connecting research requirements to appropriate technologies." },
+  { slug: "case-studies", name: "Case Studies", description: "A structure for documented installations and research outcomes as verified stories become available." },
+  { slug: "news", name: "News", description: "Updates from NB Instrument, its technology portfolio and the research ecosystem." },
+];
