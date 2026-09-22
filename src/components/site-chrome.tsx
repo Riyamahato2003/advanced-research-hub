@@ -18,9 +18,9 @@ export function SiteHeader() {
         {nav.map(([label, to]) => label === "Technologies" ? <div className="mega-trigger" key={label} onMouseEnter={() => setMega(true)} onMouseLeave={() => setMega(false)}><Link to={to} onFocus={() => setMega(true)}>{label}<ChevronDown size={13}/></Link><div className={`mega-menu ${mega ? "is-open" : ""}`}><div className="mega-intro"><span className="eyebrow">Technology portfolio</span><h2>Systems selected around the research.</h2><Link to="/technologies">View all technologies ↗</Link></div><div className="mega-grid">{technologies.map((t) => <Link key={t.slug} to="/technologies/$slug" params={{ slug: t.slug }}><small>{t.number}</small><span>{t.name}</span><p>{t.summary}</p></Link>)}</div></div></div> : <Link key={label} to={to}>{label}</Link>)}
       </nav>
       <ActionLink to="/contact" className="nav-cta">Discuss your requirement</ActionLink>
-      <button className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
+      <button type="button" className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
     </div>
-    {open && <nav className="mobile-nav" aria-label="Mobile navigation">{nav.map(([label,to]) => <Link key={label} to={to} onClick={() => setOpen(false)}>{label}<span>↗</span></Link>)}<ActionLink to="/contact">Discuss your requirement</ActionLink></nav>}
+    {open && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">{nav.map(([label,to]) => <Link key={label} to={to} onClick={() => setOpen(false)}>{label}<span>↗</span></Link>)}<ActionLink to="/contact">Discuss your requirement</ActionLink></nav>}
   </header>;
 }
 
