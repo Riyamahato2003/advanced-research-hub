@@ -10,14 +10,64 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ApplicationsIndexRouteImport } from './routes/applications.index'
+import { Route as ApplicationsApplicationRouteImport } from './routes/applications.$application'
+import { Route as PartnersIndexRouteImport } from './routes/partners.index'
+import { Route as PartnersPartnerRouteImport } from './routes/partners.$partner'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsProductRouteImport } from './routes/products.$product'
+import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
+import { Route as ResourcesCategoryRouteImport } from './routes/resources.$category'
 import { Route as TechnologiesIndexRouteImport } from './routes/technologies.index'
 import { Route as TechnologiesSlugRouteImport } from './routes/technologies.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRoute = LocationsRouteImport.update({
+  id: '/locations',
+  path: '/locations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplicationsIndexRoute = ApplicationsIndexRouteImport.update({
+  id: '/applications/',
+  path: '/applications/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApplicationsApplicationRoute = ApplicationsApplicationRouteImport.update({
+  id: '/applications/$application',
+  path: '/applications/$application',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersIndexRoute = PartnersIndexRouteImport.update({
+  id: '/partners/',
+  path: '/partners/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersPartnerRoute = PartnersPartnerRouteImport.update({
+  id: '/partners/$partner',
+  path: '/partners/$partner',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsIndexRoute = ProductsIndexRouteImport.update({
@@ -28,6 +78,16 @@ const ProductsIndexRoute = ProductsIndexRouteImport.update({
 const ProductsProductRoute = ProductsProductRouteImport.update({
   id: '/products/$product',
   path: '/products/$product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCategoryRoute = ResourcesCategoryRouteImport.update({
+  id: '/resources/$category',
+  path: '/resources/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TechnologiesIndexRoute = TechnologiesIndexRouteImport.update({
@@ -43,55 +103,125 @@ const TechnologiesSlugRoute = TechnologiesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/solutions': typeof SolutionsRoute
+  '/applications/$application': typeof ApplicationsApplicationRoute
+  '/partners/$partner': typeof PartnersPartnerRoute
   '/products/$product': typeof ProductsProductRoute
+  '/resources/$category': typeof ResourcesCategoryRoute
   '/technologies/$slug': typeof TechnologiesSlugRoute
+  '/applications/': typeof ApplicationsIndexRoute
+  '/partners/': typeof PartnersIndexRoute
   '/products/': typeof ProductsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/technologies/': typeof TechnologiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/solutions': typeof SolutionsRoute
+  '/applications/$application': typeof ApplicationsApplicationRoute
+  '/partners/$partner': typeof PartnersPartnerRoute
   '/products/$product': typeof ProductsProductRoute
+  '/resources/$category': typeof ResourcesCategoryRoute
   '/technologies/$slug': typeof TechnologiesSlugRoute
+  '/applications': typeof ApplicationsIndexRoute
+  '/partners': typeof PartnersIndexRoute
   '/products': typeof ProductsIndexRoute
+  '/resources': typeof ResourcesIndexRoute
   '/technologies': typeof TechnologiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/locations': typeof LocationsRoute
+  '/solutions': typeof SolutionsRoute
+  '/applications/$application': typeof ApplicationsApplicationRoute
+  '/partners/$partner': typeof PartnersPartnerRoute
   '/products/$product': typeof ProductsProductRoute
+  '/resources/$category': typeof ResourcesCategoryRoute
   '/technologies/$slug': typeof TechnologiesSlugRoute
+  '/applications/': typeof ApplicationsIndexRoute
+  '/partners/': typeof PartnersIndexRoute
   '/products/': typeof ProductsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/technologies/': typeof TechnologiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/contact'
+    | '/locations'
+    | '/solutions'
+    | '/applications/$application'
+    | '/partners/$partner'
     | '/products/$product'
+    | '/resources/$category'
     | '/technologies/$slug'
+    | '/applications/'
+    | '/partners/'
     | '/products/'
+    | '/resources/'
     | '/technologies/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/contact'
+    | '/locations'
+    | '/solutions'
+    | '/applications/$application'
+    | '/partners/$partner'
     | '/products/$product'
+    | '/resources/$category'
     | '/technologies/$slug'
+    | '/applications'
+    | '/partners'
     | '/products'
+    | '/resources'
     | '/technologies'
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/contact'
+    | '/locations'
+    | '/solutions'
+    | '/applications/$application'
+    | '/partners/$partner'
     | '/products/$product'
+    | '/resources/$category'
     | '/technologies/$slug'
+    | '/applications/'
+    | '/partners/'
     | '/products/'
+    | '/resources/'
     | '/technologies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  LocationsRoute: typeof LocationsRoute
+  SolutionsRoute: typeof SolutionsRoute
+  ApplicationsApplicationRoute: typeof ApplicationsApplicationRoute
+  PartnersPartnerRoute: typeof PartnersPartnerRoute
   ProductsProductRoute: typeof ProductsProductRoute
+  ResourcesCategoryRoute: typeof ResourcesCategoryRoute
   TechnologiesSlugRoute: typeof TechnologiesSlugRoute
+  ApplicationsIndexRoute: typeof ApplicationsIndexRoute
+  PartnersIndexRoute: typeof PartnersIndexRoute
   ProductsIndexRoute: typeof ProductsIndexRoute
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
   TechnologiesIndexRoute: typeof TechnologiesIndexRoute
 }
 
@@ -102,6 +232,62 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations': {
+      id: '/locations'
+      path: '/locations'
+      fullPath: '/locations'
+      preLoaderRoute: typeof LocationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/applications/': {
+      id: '/applications/'
+      path: '/applications'
+      fullPath: '/applications/'
+      preLoaderRoute: typeof ApplicationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/applications/$application': {
+      id: '/applications/$application'
+      path: '/applications/$application'
+      fullPath: '/applications/$application'
+      preLoaderRoute: typeof ApplicationsApplicationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners/': {
+      id: '/partners/'
+      path: '/partners'
+      fullPath: '/partners/'
+      preLoaderRoute: typeof PartnersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners/$partner': {
+      id: '/partners/$partner'
+      path: '/partners/$partner'
+      fullPath: '/partners/$partner'
+      preLoaderRoute: typeof PartnersPartnerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/': {
@@ -116,6 +302,20 @@ declare module '@tanstack/react-router' {
       path: '/products/$product'
       fullPath: '/products/$product'
       preLoaderRoute: typeof ProductsProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/$category': {
+      id: '/resources/$category'
+      path: '/resources/$category'
+      fullPath: '/resources/$category'
+      preLoaderRoute: typeof ResourcesCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/technologies/': {
@@ -137,9 +337,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  LocationsRoute: LocationsRoute,
+  SolutionsRoute: SolutionsRoute,
+  ApplicationsApplicationRoute: ApplicationsApplicationRoute,
+  PartnersPartnerRoute: PartnersPartnerRoute,
   ProductsProductRoute: ProductsProductRoute,
+  ResourcesCategoryRoute: ResourcesCategoryRoute,
   TechnologiesSlugRoute: TechnologiesSlugRoute,
+  ApplicationsIndexRoute: ApplicationsIndexRoute,
+  PartnersIndexRoute: PartnersIndexRoute,
   ProductsIndexRoute: ProductsIndexRoute,
+  ResourcesIndexRoute: ResourcesIndexRoute,
   TechnologiesIndexRoute: TechnologiesIndexRoute,
 }
 export const routeTree = rootRouteImport
