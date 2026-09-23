@@ -167,8 +167,8 @@
 .eyebrow { display: inline-block; color: var(--brand); font-size: .7rem; font-weight: 600; line-height: 1.2; text-transform: uppercase; letter-spacing: .12em; }
 .section-heading { display: grid; gap: 1.5rem; margin-bottom: clamp(3.5rem, 6vw, 6rem); max-width: 58rem; }
 .section-heading.split { max-width: none; grid-template-columns: minmax(0, 7fr) minmax(17rem, 4fr); align-items: end; }
-.section-heading h2, .intro-grid h2, .contact-band h2, .ecosystem h2 { font-size: clamp(2.8rem, 5.6vw, 5.5rem); letter-spacing: -.04em; }
-.section-heading p, .intro-grid p, .contact-band p, .ecosystem p, .detail-intro > p { color: var(--steel); font-size: clamp(1rem, 1.3vw, 1.16rem); max-width: 38rem; }
+.section-heading h2, .contact-band h2 { font-size: clamp(2.8rem, 5.6vw, 5.5rem); letter-spacing: -.04em; }
+.section-heading p, .contact-band p, .detail-intro > p { color: var(--steel); font-size: clamp(1rem, 1.3vw, 1.16rem); max-width: 38rem; }
 
 .action { display: inline-flex; width: fit-content; min-height: 3.25rem; align-items: center; justify-content: center; gap: 1.4rem; border: 1px solid transparent; border-radius: 2px; padding: .8rem 1.15rem; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; transition: color .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease); }
 .action span { transition: transform .25s var(--ease); }
@@ -219,14 +219,24 @@
 .page-hero-content p { max-width: 43rem; color: color-mix(in oklch,var(--paper) 72%,transparent); font-size: clamp(1.05rem,1.5vw,1.25rem); }
 .page-hero-arrow { margin-top: 3rem; }
 
-.intro-section { padding-block: clamp(7rem,11vw,11rem); }
-.intro-grid { display: grid; grid-template-columns: 2fr 6fr 4fr; gap: 2rem; align-items: start; }
-.intro-grid h2 { max-width: 52rem; }
-.intro-grid .action { margin-top: 2rem; }
-.stats { display: grid; grid-template-columns: repeat(4,1fr); margin-top: clamp(6rem,9vw,9rem); border-top: 1px solid var(--line); }
-.stats > div { padding: 2.2rem 1.5rem 1rem 0; border-right: 1px solid var(--line); }
-.stats strong { display: block; font-family: var(--font-display); font-size: clamp(2rem,4vw,4rem); font-weight: 500; letter-spacing: -.04em; }
-.stats span { color: var(--steel); font-size: .78rem; }
+.story-section { padding-block: clamp(6.5rem,10vw,9.5rem) clamp(3.5rem,5vw,5rem); }
+.story-grid { display: grid; grid-template-columns: minmax(0,7fr) minmax(21rem,5fr); gap: clamp(3rem,6vw,7rem); align-items: center; }
+.story-map { margin: 0; }
+.story-map img { width: 100%; height: auto; }
+.story-map figcaption { display: flex; flex-wrap: wrap; gap: .6rem 2rem; justify-content: space-between; margin-top: 1.5rem; padding-top: 1.1rem; border-top: 1px solid var(--line); color: var(--steel); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+.story-copy > .eyebrow { margin-bottom: 1.6rem; }
+.story-copy h2 { max-width: 20ch; font-size: clamp(2.7rem,5vw,4.6rem); letter-spacing: -.045em; }
+.story-copy .lead { margin-top: 1.9rem; color: var(--ink); font-size: clamp(1.1rem,1.6vw,1.35rem); line-height: 1.55; }
+.story-copy p { margin-top: 1.5rem; color: var(--steel); }
+.story-signature { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1.1rem; margin-top: 2.6rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.story-signature strong { font-family: var(--font-display); font-size: 1.05rem; }
+.story-signature span { color: var(--steel); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+
+.stats { display: grid; grid-template-columns: repeat(4,1fr); margin-top: clamp(3.5rem,6vw,5.5rem); border: 1px solid var(--line); }
+.stats > div { padding: clamp(1.6rem,2.4vw,2.2rem) clamp(1.25rem,2vw,2rem); border-right: 1px solid var(--line); }
+.stats > div:last-child { border-right: 0; }
+.stats strong { display: block; font-family: var(--font-display); font-size: clamp(1.7rem,2.7vw,2.5rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; }
+.stats span { display: block; margin-top: .6rem; color: var(--steel); font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; }
 
 .tech-index { border-top: 1px solid var(--line); }
 .tech-row { display: grid; grid-template-columns: 0fr 3rem minmax(0,1fr) 2rem; gap: 1.5rem; align-items: center; min-height: 9rem; border-bottom: 1px solid var(--line); transition: grid-template-columns .55s var(--ease), background .3s; }
