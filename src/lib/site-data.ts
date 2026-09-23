@@ -62,3 +62,24 @@ export const resourceCategories = [
   { slug: "case-studies", name: "Case Studies", description: "A structure for documented installations and research outcomes as verified stories become available." },
   { slug: "news", name: "News", description: "Updates from NB Instrument, its technology portfolio and the research ecosystem." },
 ];
+
+/** Which technology environments each application draws on (for related links). */
+export const applicationTechnologies: Record<string, string[]> = {
+  "thin-film-deposition": ["thin-film-vacuum", "semiconductor"],
+  "semiconductor-rd": ["semiconductor", "thin-film-vacuum"],
+  "vacuum-surface-science": ["thin-film-vacuum", "characterization"],
+  "epr-magnetic-resonance": ["magnetic-spin", "characterization"],
+  nanotechnology: ["materials-nanotechnology", "characterization"],
+  "materials-characterization": ["characterization", "materials-nanotechnology"],
+  "plasma-processing": ["thin-film-vacuum", "materials-nanotechnology"],
+  photonics: ["photonics", "characterization"],
+};
+
+/** NB Instrument's published support model, from requirement to long-term operation. */
+export const supportStages = [
+  { name: "Requirement consultation", text: "Understanding the research objective, sample, process and laboratory environment before any system is discussed." },
+  { name: "Technology selection", text: "Matching the requirement with the most appropriate international technology partner and configuration." },
+  { name: "Supply & installation", text: "Coordinating delivery, site readiness and installation with the manufacturer's technical teams." },
+  { name: "Training", text: "Hands-on training so research teams can operate the system confidently from the first day." },
+  { name: "Post-supply support", text: "Application guidance, service coordination and support throughout the working life of the system." },
+];
