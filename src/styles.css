@@ -389,7 +389,6 @@
   .application-tile, .application-tile:nth-child(1), .application-tile:nth-child(6) { grid-column: span 6; min-height: 24rem; }
   .finder-panel { padding: 2rem 1.25rem; }
   .product-grid { grid-template-columns: 1fr 1fr; }
-  .why-grid { grid-template-columns: 1fr 1fr; }
   .journal-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-contact { grid-column: 1/-1; padding: 2rem 0 0; border-left: 0; border-top: 1px solid color-mix(in oklch,var(--paper) 15%,transparent); }
@@ -403,11 +402,11 @@
   .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
   .hero-actions .action { width: 100%; }
   .scroll-cue { margin-top: 2.5rem; }
-  .stats, .product-grid, .why-grid, .partner-grid, .contact-form { grid-template-columns: 1fr; }
-  .stats > div { border-right: 0; }
+  .stats, .product-grid, .partner-grid, .contact-form { grid-template-columns: 1fr; }
+  .stats > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .stats > div:last-child { border-bottom: 0; }
   .application-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin-right: -1.25rem; padding-right: 1.25rem; }
   .application-tile, .application-tile:nth-child(1), .application-tile:nth-child(6) { flex: 0 0 85%; min-height: 27rem; scroll-snap-align: start; }
-  .institution-list span { width: 100%; }
   .topic-list > div, .spec-bands > div { grid-template-columns: 2.5rem 1fr; gap: .5rem; }
   .spec-bands span { grid-column: 2; padding-bottom: 1rem; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -419,4 +418,42 @@
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* ------------------------------------------------------------------
+ * Motion system — hero entrance, scroll reveals, hover transitions
+ * ------------------------------------------------------------------ */
+@keyframes hero-rise { from { opacity: 0; transform: translateY(2.4rem); } to { opacity: 1; transform: none; } }
+
+.home-hero .hero-content > * { animation: hero-rise 1.05s var(--ease) both; }
+.home-hero .hero-content > *:nth-child(1) { animation-delay: .4s; }
+.home-hero .hero-content > *:nth-child(2) { animation-delay: .58s; }
+.home-hero .hero-content > *:nth-child(3) { animation-delay: .84s; }
+.home-hero .hero-content > *:nth-child(4) { animation-delay: 1.06s; }
+.home-hero .hero-content > *:nth-child(5) { animation-delay: 1.32s; }
+
+[data-reveal] { opacity: 0; transform: translateY(2.2rem); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+[data-reveal="image"] { opacity: 0; transform: none; clip-path: inset(0 0 100% 0); transition: clip-path 1.2s var(--ease), opacity .9s var(--ease); }
+[data-reveal="image"].is-visible { opacity: 1; clip-path: inset(0 0 0 0); }
+[data-reveal][data-delay="1"] { transition-delay: .12s; }
+[data-reveal][data-delay="2"] { transition-delay: .24s; }
+
+/* Navigation indicator */
+.desktop-nav > a, .mega-trigger > a { position: relative; }
+.desktop-nav > a::after, .mega-trigger > a::after { content: ""; position: absolute; left: 0; right: 100%; top: calc(50% + 1rem); height: 1px; background: var(--brand); transition: right .45s var(--ease); }
+.desktop-nav > a:hover::after, .mega-trigger > a:hover::after, .mega-trigger.is-open > a::after { right: 0; }
+
+/* Hover polish */
+.product-card { transition: transform .5s var(--ease); }
+.product-card:hover { transform: translateY(-4px); }
+.text-link svg { transition: transform .3s var(--ease); }
+.text-link:hover svg { transform: translateX(4px); }
+.application-tile > div:last-child > svg { transition: transform .45s var(--ease); }
+.application-tile:hover > div:last-child > svg { transform: translate(4px, 4px); }
+.tech-row { transition: grid-template-columns .55s var(--ease), background .3s, color .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal], [data-reveal="image"] { opacity: 1; transform: none; clip-path: none; }
+  .home-hero .hero-content > * { animation: none; }
 }
