@@ -20,7 +20,7 @@ function CategoryPage() {
   const c = Route.useLoaderData();
   return (
     <main>
-      <PageHero eyebrow="Resources" title={c.name} intro={c.description} image={heroFor[c.slug]} />
+      <PageHero eyebrow="Resources" title={c.name} intro={c.description} image={heroFor[c.slug] ?? images.heroImage} />
       <section className="section">
         <div className="container">
           <p className="page-note">Editable placeholder: the stories below show the publication layout. Replace them with verified NB Instrument publications.</p>
