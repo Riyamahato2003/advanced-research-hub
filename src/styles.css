@@ -219,7 +219,7 @@
 .page-hero-content p { max-width: 43rem; color: color-mix(in oklch,var(--paper) 72%,transparent); font-size: clamp(1.05rem,1.5vw,1.25rem); }
 .page-hero-arrow { margin-top: 3rem; }
 
-.story-section { padding-block: clamp(6.5rem,10vw,9.5rem) clamp(3.5rem,5vw,5rem); }
+.story-section { padding-block: clamp(6.5rem,10vw,9.5rem) 0; }
 .story-grid { display: grid; grid-template-columns: minmax(0,7fr) minmax(21rem,5fr); gap: clamp(3rem,6vw,7rem); align-items: center; }
 .story-map { margin: 0; }
 .story-map img { width: 100%; height: auto; }
