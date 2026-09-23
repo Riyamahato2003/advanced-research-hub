@@ -285,17 +285,6 @@
 .product-card:hover img { transform: scale(1.04); }
 .text-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem; color: var(--brand); font-size: .75rem; font-weight: 600; text-transform: uppercase; }
 
-.why-section { padding-block: clamp(6rem,9vw,9rem); background: var(--night); color: var(--paper); }
-.why-grid { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 3rem; border-top: 1px solid color-mix(in oklch,var(--paper) 16%,transparent); }
-.why-grid > div { min-height: 14rem; padding: 1.6rem 1.6rem 1.6rem 0; border-right: 1px solid color-mix(in oklch,var(--paper) 16%,transparent); border-bottom: 1px solid color-mix(in oklch,var(--paper) 16%,transparent); }
-.why-grid small { color: var(--brand); }
-.why-grid h3 { max-width: 15rem; margin-top: 3.5rem; font-size: 1.7rem; }
-.ecosystem { padding-block: clamp(7rem,11vw,11rem); }
-.ecosystem-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 8vw; }
-.ecosystem h2 { margin-top: 1.5rem; }
-.institution-list { display: flex; flex-wrap: wrap; align-content: center; }
-.institution-list span { width: 50%; padding: 1.1rem 0; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-size: 1.25rem; }
-
 .journal-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 3rem; }
 .lead-story img { width: 100%; aspect-ratio: 16/10; object-fit: cover; margin-bottom: 1.5rem; }
 .lead-story h3 { margin-top: .8rem; font-size: clamp(2rem,3vw,3.2rem); }
@@ -376,10 +365,11 @@
   .hero-content, .page-hero-content { padding-block: 8rem 3rem; }
   .hero-content h1 { font-size: clamp(3.4rem,13vw,5.8rem); }
   .image-shade { background: linear-gradient(0deg,color-mix(in oklch,var(--night) 94%,transparent),color-mix(in oklch,var(--night) 18%,transparent)); }
-  .intro-grid, .section-heading.split, .finder-grid, .ecosystem-grid, .detail-intro, .product-detail, .contact-grid, .contact-band-grid, .footer-lead { grid-template-columns: 1fr; }
-  .intro-grid { gap: 1.8rem; }
+  .story-grid, .section-heading.split, .finder-grid, .detail-intro, .product-detail, .contact-grid, .contact-band-grid, .footer-lead { grid-template-columns: 1fr; }
+  .story-grid { gap: 2.75rem; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats > div:nth-child(2) { border-right: 0; }
+  .stats > div:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
   .tech-row, .tech-row:hover, .tech-row.featured { grid-template-columns: 2.25rem 1fr 1.25rem; padding-block: 1.4rem; }
   .tech-row .tech-image { display: none; }
   .tech-row p { font-size: .86rem; }
