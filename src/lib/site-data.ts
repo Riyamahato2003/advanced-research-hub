@@ -3,7 +3,15 @@ import waferImage from "@/assets/nb-wafer.jpg";
 import plasmaImage from "@/assets/nb-plasma.jpg";
 import photonicsImage from "@/assets/nb-photonics.jpg";
 
-export const images = { heroImage, waferImage, plasmaImage, photonicsImage };
+/**
+ * Photography supplied by NB Instrument, served from the project asset store.
+ * Pointer files: src/assets/nb-hero-lab.webp.asset.json
+ *                src/assets/nb-partner-map.webp.asset.json
+ */
+const labImage = "/__l5e/assets-v1/76597500-d483-42b3-92ba-721988e89390/nb-hero-lab.webp";
+const partnerMapImage = "/__l5e/assets-v1/6f797a36-79d4-48e4-9985-982479e94c3a/nb-partner-map.webp";
+
+export const images = { heroImage, waferImage, plasmaImage, photonicsImage, labImage, partnerMapImage };
 
 export type Technology = { slug: string; name: string; number: string; summary: string; details: string; topics: string[]; image: string };
 export const technologies: Technology[] = [
