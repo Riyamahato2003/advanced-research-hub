@@ -1,47 +1,37 @@
 import { useEffect } from "react";
 
 /**
- * Reveals `[data-reveal]` elements as they enter the viewport.
+ * Reveals `[data-reveal]` elements once they reach the viewport.
  *
- * Anything already on screen is shown immediately (before the observer is even
- * created) so the first paint never leaves content invisible; everything below
- * the fold fades up on first intersection.
+ * A single rAF-throttled sweep handles every case — first paint, normal
+ * scrolling, and pages that jump straight past a section via a nav link — so
+ * content can never be left permanently invisible.
  */
 export function useReveal() {
   useEffect(() => {
-    const all = () =>
-      Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]:not(.is-visible)"));
+    let frame = 0;
 
-    const show = (el: Element) => el.classList.add("is-visible");
-
-    const alreadyInView = (el: HTMLElement) => {
-      const rect = el.getBoundingClientRect();
-      return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    const sweep = () => {
+      frame = 0;
+      const limit = window.innerHeight * 0.92;
+      document
+        .querySelectorAll<HTMLElement>("[data-reveal]:not(.is-visible)")
+        .forEach((el) => {
+          if (el.getBoundingClientRect().top < limit) el.classList.add("is-visible");
+        });
     };
 
-    all().forEach((el) => {
-      if (alreadyInView(el)) show(el);
-    });
+    const request = () => {
+      if (!frame) frame = requestAnimationFrame(sweep);
+    };
 
-    const pending = all();
-    if (!pending.length) return;
-
-    if (!("IntersectionObserver" in window)) {
-      pending.forEach(show);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          show(entry.target);
-          observer.unobserve(entry.target);
-        }),
-      { rootMargin: "0px 0px -8% 0px", threshold: 0 },
-    );
-
-    pending.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    sweep();
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", request);
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", request);
+      window.removeEventListener("resize", request);
+    };
   }, []);
 }
