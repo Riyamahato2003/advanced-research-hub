@@ -112,7 +112,6 @@ function HomePage() {
               alt="World map highlighting the countries where NB Instrument's technology partners are based"
               width={1779}
               height={884}
-              loading="lazy"
             />
             <figcaption>
               <span>Where our technology partners are based</span>
