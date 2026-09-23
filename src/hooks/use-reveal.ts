@@ -1,19 +1,33 @@
 import { useEffect } from "react";
 
 /**
- * Adds `.is-visible` to every `[data-reveal]` element as it scrolls into view.
- * Anything already on screen resolves on the first frame after hydration, so
- * the page never renders with invisible content.
+ * Reveals `[data-reveal]` elements as they enter the viewport.
+ *
+ * Anything already on screen is shown immediately (before the observer is even
+ * created) so the first paint never leaves content invisible; everything below
+ * the fold fades up on first intersection.
  */
 export function useReveal() {
   useEffect(() => {
-    const targets = Array.from(
-      document.querySelectorAll<HTMLElement>("[data-reveal]:not(.is-visible)"),
-    );
-    if (!targets.length) return;
+    const all = () =>
+      Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]:not(.is-visible)"));
+
+    const show = (el: Element) => el.classList.add("is-visible");
+
+    const alreadyInView = (el: HTMLElement) => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    };
+
+    all().forEach((el) => {
+      if (alreadyInView(el)) show(el);
+    });
+
+    const pending = all();
+    if (!pending.length) return;
 
     if (!("IntersectionObserver" in window)) {
-      targets.forEach((el) => el.classList.add("is-visible"));
+      pending.forEach(show);
       return;
     }
 
@@ -21,13 +35,13 @@ export function useReveal() {
       (entries) =>
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
+          show(entry.target);
           observer.unobserve(entry.target);
         }),
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0 },
     );
 
-    targets.forEach((el) => observer.observe(el));
+    pending.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 }
