@@ -1,7 +1,5 @@
-# NB Instrument completion roadmap
-
-- [x] Restore and complete the global visual design system
-- [x] Complete all requested content routes and shared interactions
-- [x] Polish navigation, menus, forms, typography, imagery, and motion
-- [x] Validate desktop and mobile layouts across requested viewports
-- [x] Resolve build, runtime, accessibility, metadata, and overflow issues
+- [ ] Build featured technology autoplay slideshow
+- [ ] Remove homepage Applications and Solution Finder
+- [ ] Replace first three product entries and imagery
+- [ ] Rebuild three product detail pages from manufacturer references
+- [ ] Verify desktop and mobile layouts
