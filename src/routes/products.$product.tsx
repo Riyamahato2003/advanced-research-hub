@@ -1,3 +1,28 @@
-import { createFileRoute, notFound } from "@tanstack/react-router"; import { products } from "@/lib/site-data"; import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections"; import { ActionLink } from "@/components/button";
-export const Route=createFileRoute("/products/$product")({loader:({params})=>{const item=products.find(x=>x.slug===params.product);if(!item)throw notFound();return item},head:({loaderData})=>({meta:[{title:`${loaderData?.name??"System"} — NB Instrument`},{name:"description",content:loaderData?.line??"Scientific system from NB Instrument."},{property:"og:title",content:`${loaderData?.name??"System"} — NB Instrument`},{property:"og:description",content:loaderData?.line??"Scientific system."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:ProductPage});
-function ProductPage(){const p=Route.useLoaderData();return <main><PageHero eyebrow={p.category} title={p.name} intro={p.line} image={p.image}/><section className="section"><div className="container product-detail"><div><Eyebrow>Overview</Eyebrow><h2>Configured around your research environment.</h2></div><div><p>This page presents the system’s verified public positioning. Detailed configuration, compatibility and performance depend on the application and selected manufacturer specification.</p><ActionLink to="/contact">Request technical discussion</ActionLink></div></div><div className="container spec-bands">{["Key capabilities","Technical specifications","Applications","Related technologies","Resources"].map((x,i)=><div key={x}><small>0{i+1}</small><h3>{x}</h3><span>Discuss with our technical team ↗</span></div>)}</div></section><ContactBand/></main>}
+import { createFileRoute, notFound } from "@tanstack/react-router";
+import { products } from "@/lib/site-data";
+import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
+import { ActionLink } from "@/components/button";
+import { HexPage, PulsedEprPage, UfastPage } from "@/components/product-pages";
+import { useReveal } from "@/hooks/use-reveal";
+
+export const Route = createFileRoute("/products/$product")({
+  loader: ({ params }) => { const item = products.find((x) => x.slug === params.product); if (!item) throw notFound(); return item; },
+  head: ({ loaderData }) => ({ meta: [
+    { title: `${loaderData?.name ?? "System"} — NB Instrument` },
+    { name: "description", content: loaderData?.line ?? "Scientific system from NB Instrument." },
+    { property: "og:title", content: `${loaderData?.name ?? "System"} — NB Instrument` },
+    { property: "og:description", content: loaderData?.line ?? "Scientific system." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
+  component: ProductPage,
+});
+
+function ProductPage() {
+  const p = Route.useLoaderData();
+  useReveal();
+  if (p.slug === "u-fast-sps-mass") return <UfastPage />;
+  if (p.slug === "x-band-pulsed-esr-epr") return <PulsedEprPage />;
+  if (p.slug === "hex-series") return <HexPage />;
+  return <main><PageHero eyebrow={p.category} title={p.name} intro={p.line} image={p.image}/><section className="section"><div className="container product-detail"><div><Eyebrow>Overview</Eyebrow><h2>Configured around your research environment.</h2></div><div><p>This page presents the system’s verified public positioning. Detailed configuration, compatibility and performance depend on the application and selected manufacturer specification.</p><ActionLink to="/contact">Request technical discussion</ActionLink></div></div><div className="container spec-bands">{["Key capabilities","Technical specifications","Applications","Related technologies","Resources"].map((x,i)=><div key={x}><small>0{i+1}</small><h3>{x}</h3><span>Discuss with our technical team ↗</span></div>)}</div></section><ContactBand/></main>;
+}
