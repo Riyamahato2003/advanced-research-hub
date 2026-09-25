@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { images } from "@/lib/site-data";
 import { ActionLink } from "@/components/button";
-import { ApplicationGrid, ContactBand, Eyebrow, ProductGrid, TechnologyIndex } from "@/components/page-sections";
+import { ContactBand, Eyebrow, ProductGrid, TechnologyIndex } from "@/components/page-sections";
+import { FeaturedSlider } from "@/components/featured-slider";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
@@ -19,64 +19,6 @@ export const Route = createFileRoute("/")({
   }),
   component: HomePage,
 });
-
-const questions = [
-  { q: "What are you working on?", a: ["Thin films & surfaces", "Semiconductor devices", "Advanced materials", "Spin & spectroscopy"] },
-  { q: "What are you trying to achieve?", a: ["Deposit or coat", "Process or fabricate", "Analyze or characterize", "Develop a new method"] },
-  { q: "Which environment matters most?", a: ["Vacuum", "Plasma", "Optical", "Magnetic"] },
-];
-
-function Finder() {
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<string[]>([]);
-  const question = step < questions.length ? questions[step] : undefined;
-
-  const choose = (a: string) => {
-    setAnswers([...answers, a]);
-    setStep(step + 1);
-  };
-
-  const recommended =
-    answers.includes("Thin films & surfaces") || answers.includes("Vacuum") || answers.includes("Plasma")
-      ? "Thin Film & Vacuum"
-      : "Application-led technology review";
-
-  return (
-    <section className="finder-section">
-      <div className="container finder-grid">
-        <div data-reveal>
-          <Eyebrow>Solution finder</Eyebrow>
-          <h2>Find the right technology.</h2>
-          <p>Begin with the research objective, not a model number.</p>
-          <div className="finder-progress">
-            {[0, 1, 2].map((i) => <span key={i} className={i <= step ? "active" : ""} />)}
-          </div>
-        </div>
-        <div className="finder-panel" data-reveal>
-          {question ? (
-            <>
-              <small>0{step + 1} / 03</small>
-              <h3>{question.q}</h3>
-              <div className="finder-options">
-                {question.a.map((a) => (
-                  <button key={a} type="button" onClick={() => choose(a)}>{a}<ArrowRight /></button>
-                ))}
-              </div>
-            </>
-          ) : (
-            <>
-              <Eyebrow>Recommended direction</Eyebrow>
-              <h3>{recommended}</h3>
-              <p>Your selections: {answers.join(" · ")}. Our team can translate this into a relevant system configuration.</p>
-              <ActionLink to="/contact">Review this requirement</ActionLink>
-              <button type="button" className="finder-reset" onClick={() => { setStep(0); setAnswers([]); }}>Start again</button>
-            </>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function HomePage() {
   useReveal();
@@ -142,37 +84,7 @@ function HomePage() {
 
       <div data-reveal><TechnologyIndex /></div>
 
-      <section className="feature-story dark-section">
-        <div className="feature-image" data-reveal="image">
-          <img src={images.plasmaImage} alt="Plasma process inside a vacuum chamber" loading="lazy" width={1600} height={1200} />
-        </div>
-        <div className="feature-copy" data-reveal>
-          <Eyebrow>Featured technology</Eyebrow>
-          <h2>Advanced thin-film deposition.</h2>
-          <p>Configurable platforms for controlled coating, materials development and precision process research—from magnetron sputtering to vacuum integration.</p>
-          <ul>
-            <li>Research-led configurations</li>
-            <li>Process flexibility</li>
-            <li>Installation and technical support</li>
-          </ul>
-          <ActionLink to="/technologies/thin-film-vacuum" tone="light">Explore thin film &amp; vacuum</ActionLink>
-        </div>
-      </section>
-
-      <section className="section applications-section">
-        <div className="container">
-          <div className="section-heading split" data-reveal>
-            <div>
-              <Eyebrow>Applications</Eyebrow>
-              <h2>Start with what you need to achieve.</h2>
-            </div>
-            <p>Explore technologies through research outcomes, materials and process environments.</p>
-          </div>
-          <div data-reveal><ApplicationGrid /></div>
-        </div>
-      </section>
-
-      <Finder />
+      <FeaturedSlider />
 
       <section className="section systems-section">
         <div className="container">
