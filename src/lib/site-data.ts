@@ -24,9 +24,9 @@ export const technologies: Technology[] = [
 ];
 
 export const products = [
-  { slug: "tsfc-1001-pem-fuel-cell-test-station", name: "TSFC-1001 PEM Fuel Cell Test Station", category: "Fuel Cell Systems", line: "Automated platform for controlled PEM fuel-cell research and characterization.", image: heroImage },
-  { slug: "x-band-pulsed-esr-epr", name: "X-band Pulsed ESR / EPR", category: "Spectroscopy Systems", line: "High-sensitivity electron spin resonance for advanced research.", image: photonicsImage },
-  { slug: "icp5000-dual-view-icp-oes", name: "ICP5000 Dual View ICP-OES", category: "Elemental Analysis", line: "Automated elemental analysis with axial and radial plasma viewing.", image: plasmaImage },
+  { slug: "u-fast-sps-mass", name: "U-FAST (SPS) MASS", category: "Advanced Materials Processing", line: "Industrial-Scale Advanced SPS Sintering.", image: "/__l5e/assets-v1/69b38b08-9d5e-4235-81a9-9342ed46b0ba/ufast-home.png" },
+  { slug: "x-band-pulsed-esr-epr", name: "X-band Pulsed ESR / EPR", category: "Spectroscopy Systems", line: "High-sensitivity electron spin resonance for advanced research.", image: "/__l5e/assets-v1/2aa938a8-3395-46bf-9eb4-829c5e74748f/pulsed-epr-home.png" },
+  { slug: "hex-series", name: "HEX Series – Modular Thin Film Deposition Systems", category: "Thin Film Deposition Systems", line: "Highly Modular Thin-Film Deposition.", image: "/__l5e/assets-v1/55c4db38-4132-4d41-a344-185b543d2fe6/hex-home.png" },
   { slug: "magnetron-sputtering-system", name: "Magnetron Sputtering System", category: "Thin Film & PVD", line: "Configurable deposition for conductive and insulating materials.", image: plasmaImage },
   { slug: "precision-wet-processing-system", name: "Precision Wet Processing System", category: "Semiconductor", line: "Stable process integration for research and pilot-scale workflows.", image: waferImage },
   { slug: "nanomaterial-synthesis-system", name: "Nanomaterial Synthesis System", category: "Nanotechnology", line: "Controlled platform for nanoparticle and functional material development.", image: waferImage },
