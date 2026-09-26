@@ -3,6 +3,7 @@ import { products } from "@/lib/site-data";
 import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
 import { ActionLink } from "@/components/button";
 import { HexPage, PulsedEprPage, UfastPage } from "@/components/product-pages";
+import { SaldPage, FuelCellPage, NanoCoatPage, OctomagPage } from "@/components/more-product-pages";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/products/$product")({
@@ -24,5 +25,9 @@ function ProductPage() {
   if (p.slug === "u-fast-sps-mass") return <UfastPage />;
   if (p.slug === "x-band-pulsed-esr-epr") return <PulsedEprPage />;
   if (p.slug === "hex-series") return <HexPage />;
+  if (p.slug === "sald-rd-spatial-ald-platform") return <SaldPage />;
+  if (p.slug === "tsfc-1001-pem-fuel-cell-test-station") return <FuelCellPage />;
+  if (p.slug === "nanocoat-c3-plus") return <NanoCoatPage />;
+  if (p.slug === "octomag-series") return <OctomagPage />;
   return <main><PageHero eyebrow={p.category} title={p.name} intro={p.line} image={p.image}/><section className="section"><div className="container product-detail"><div><Eyebrow>Overview</Eyebrow><h2>Configured around your research environment.</h2></div><div><p>This page presents the system’s verified public positioning. Detailed configuration, compatibility and performance depend on the application and selected manufacturer specification.</p><ActionLink to="/contact">Request technical discussion</ActionLink></div></div><div className="container spec-bands">{["Key capabilities","Technical specifications","Applications","Related technologies","Resources"].map((x,i)=><div key={x}><small>0{i+1}</small><h3>{x}</h3><span>Discuss with our technical team ↗</span></div>)}</div></section><ContactBand/></main>;
 }

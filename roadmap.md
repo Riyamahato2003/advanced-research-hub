@@ -1,5 +1,8 @@
-- [ ] Build featured technology autoplay slideshow
-- [ ] Remove homepage Applications and Solution Finder
-- [ ] Replace first three product entries and imagery
-- [ ] Rebuild three product detail pages from manufacturer references
-- [ ] Verify desktop and mobile layouts
+- [x] Build featured technology autoplay slideshow
+- [x] Remove homepage Applications and Solution Finder
+- [x] Replace first three product entries and imagery
+- [x] Rebuild three product detail pages from manufacturer references
+- [ ] Verify the featured slideshow and first three pages in desktop and mobile views
+- [ ] Update Our Story and Scientific Systems heading
+- [ ] Add SALD, fuel cell, nanoCOAT, and OCTOMAG cards and detail pages
+- [ ] Verify all seven products and responsive layouts
