@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+Product detail routes render dedicated product-page components while product cards share the site-data list and ProductGrid; this keeps the established card design consistent without forcing every system into a generic detail template.

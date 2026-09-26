@@ -2,6 +2,10 @@ import heroImage from "@/assets/nb-hero-vacuum.jpg";
 import waferImage from "@/assets/nb-wafer.jpg";
 import plasmaImage from "@/assets/nb-plasma.jpg";
 import photonicsImage from "@/assets/nb-photonics.jpg";
+import saldCard from "@/assets/product-7.png.asset.json";
+import fuelCard from "@/assets/product-9.png.asset.json";
+import nanoCard from "@/assets/product-11.png.asset.json";
+import octoCard from "@/assets/product-13.png.asset.json";
 
 /**
  * Photography supplied by NB Instrument, served from the project asset store.
@@ -27,9 +31,10 @@ export const products = [
   { slug: "u-fast-sps-mass", name: "U-FAST (SPS) MASS", category: "Advanced Materials Processing", line: "Industrial-Scale Advanced SPS Sintering.", image: "/__l5e/assets-v1/69b38b08-9d5e-4235-81a9-9342ed46b0ba/ufast-home.png" },
   { slug: "x-band-pulsed-esr-epr", name: "X-band Pulsed ESR / EPR", category: "Spectroscopy Systems", line: "High-sensitivity electron spin resonance for advanced research.", image: "/__l5e/assets-v1/2aa938a8-3395-46bf-9eb4-829c5e74748f/pulsed-epr-home.png" },
   { slug: "hex-series", name: "HEX Series – Modular Thin Film Deposition Systems", category: "Thin Film Deposition Systems", line: "Highly Modular Thin-Film Deposition.", image: "/__l5e/assets-v1/55c4db38-4132-4d41-a344-185b543d2fe6/hex-home.png" },
-  { slug: "magnetron-sputtering-system", name: "Magnetron Sputtering System", category: "Thin Film & PVD", line: "Configurable deposition for conductive and insulating materials.", image: plasmaImage },
-  { slug: "precision-wet-processing-system", name: "Precision Wet Processing System", category: "Semiconductor", line: "Stable process integration for research and pilot-scale workflows.", image: waferImage },
-  { slug: "nanomaterial-synthesis-system", name: "Nanomaterial Synthesis System", category: "Nanotechnology", line: "Controlled platform for nanoparticle and functional material development.", image: waferImage },
+  { slug: "sald-rd-spatial-ald-platform", name: "SALD R&D Spatial ALD Platform", category: "Atomic Layer Deposition Systems", line: "Atomic-precision coatings for research and scale-up.", image: saldCard.url },
+  { slug: "tsfc-1001-pem-fuel-cell-test-station", name: "TSFC-1001 PEM Fuel Cell Test Station", category: "Fuel Cell Systems", line: "Controlled PEM fuel-cell testing for research and prototyping.", image: fuelCard.url },
+  { slug: "nanocoat-c3-plus", name: "nanoCOAT C3+", category: "Nano-Coating Systems", line: "Integrated coating processes for wafers and large substrates.", image: nanoCard.url },
+  { slug: "octomag-series", name: "OCTOMAG Series", category: "PVD Coating Systems", line: "Advanced Precision PVD Coating.", image: octoCard.url },
 ];
 
 export const applications = [

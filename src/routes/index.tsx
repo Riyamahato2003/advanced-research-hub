@@ -63,14 +63,12 @@ function HomePage() {
 
           <div className="story-copy">
             <Eyebrow>Our story</Eyebrow>
-            <h2 data-reveal>Built one piece at a time.</h2>
-            <p className="lead" data-reveal data-delay="1">NB Instrument began with a simple belief: that research in India deserves the same access to advanced technology as anywhere else in the world.</p>
-            <p data-reveal data-delay="2">Founded by Mr. Nitay Kumar Mahato, the company came together step by step — one technology, one partnership, one laboratory at a time. We entered the Indian market not with a catalogue, but with a willingness to understand what each team was actually trying to build.</p>
-            <p data-reveal data-delay="2">We stay close to the people we work with: through the first conversation, through installation and training, and for as long as the system is in service.</p>
-            <div className="story-signature" data-reveal>
-              <strong>Mr. Nitay Kumar Mahato</strong>
-              <span>Founder · NB Instrument Pvt. Ltd.</span>
-            </div>
+            <h2 data-reveal>Global technology. Local understanding. Long-term support.</h2>
+            <p className="lead" data-reveal data-delay="1">NB Instrument connects specialised technology companies with India's rapidly developing research and advanced manufacturing ecosystem.</p>
+            <p data-reveal data-delay="2">We bring technologies that solve specific engineering and research problems rather than simply adding another product to a catalogue.</p>
+            <p data-reveal data-delay="2">From the first technical discussion to evaluation, procurement, installation, training and service, we work closely with both sides: understanding what Indian research teams actually need and helping global technology companies build meaningful presence in the market.</p>
+            <p data-reveal data-delay="2">Our goal is simple: make advanced technology easier to access, understand and use in India.</p>
+            <p data-reveal data-delay="2">And build the relationships that make it useful long after the first installation.</p>
           </div>
         </div>
 
