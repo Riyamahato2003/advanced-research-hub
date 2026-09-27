@@ -6,6 +6,10 @@ import saldCard from "@/assets/product-7.png.asset.json";
 import fuelCard from "@/assets/product-9.png.asset.json";
 import nanoCard from "@/assets/product-11.png.asset.json";
 import octoCard from "@/assets/product-13.png.asset.json";
+import ionCard from "@/assets/image-15.png.asset.json";
+import pvdCard from "@/assets/image-17.png.asset.json";
+import chemCard from "@/assets/image-19.png.asset.json";
+import pilotCard from "@/assets/image-21.png.asset.json";
 
 /**
  * Photography supplied by NB Instrument, served from the project asset store.
@@ -35,6 +39,10 @@ export const products = [
   { slug: "tsfc-1001-pem-fuel-cell-test-station", name: "TSFC-1001 PEM Fuel Cell Test Station", category: "Fuel Cell Systems", line: "Controlled PEM fuel-cell testing for research and prototyping.", image: fuelCard.url },
   { slug: "nanocoat-c3-plus", name: "nanoCOAT C3+", category: "Nano-Coating Systems", line: "Integrated coating processes for wafers and large substrates.", image: nanoCard.url },
   { slug: "octomag-series", name: "OCTOMAG Series", category: "PVD Coating Systems", line: "Advanced Precision PVD Coating.", image: octoCard.url },
+  { slug: "ion-beam-milling-system-7500", name: "Ion Beam Milling System 7500", category: "Ion Beam Systems", line: "Broad ion-beam processing for precision thin films and etching.", image: ionCard.url },
+  { slug: "nordiko-2000-2550-pvd-systems", name: "2000 & 2550 PVD Systems", category: "Physical Vapour Deposition Systems", line: "Flexible automatic batch-load sputtering systems.", image: pvdCard.url },
+  { slug: "nanochem", name: "nanoCHEM", category: "Wet Processing Systems", line: "Configurable developing, cleaning, etching and lift-off.", image: chemCard.url },
+  { slug: "sald-sheet-to-sheet-spatial-ald-pilot-platform", name: "SALD Sheet-to-Sheet Spatial ALD Pilot Platform", category: "Atomic Layer Deposition Systems", line: "Pilot-scale spatial ALD for large-area substrates.", image: pilotCard.url },
 ];
 
 export const applications = [

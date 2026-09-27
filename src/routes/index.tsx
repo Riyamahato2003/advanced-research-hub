@@ -66,8 +66,8 @@ function HomePage() {
             <h2 data-reveal>Global technology. Local understanding. Long-term support.</h2>
             <p className="lead" data-reveal data-delay="1">NB Instrument connects specialised technology companies with India's rapidly developing research and advanced manufacturing ecosystem.</p>
             <p data-reveal data-delay="2">We bring technologies that solve specific engineering and research problems rather than simply adding another product to a catalogue.</p>
-            <p data-reveal data-delay="2">From the first technical discussion to evaluation, procurement, installation, training and service, we work closely with both sides: understanding what Indian research teams actually need and helping global technology companies build meaningful presence in the market.</p>
-            <p data-reveal data-delay="2">Our goal is simple: make advanced technology easier to access, understand and use in India.</p>
+            <p data-reveal data-delay="2">From the first technical discussion to evaluation, procurement, installation, training and service, we work closely with both sides: <strong>understanding what Indian research teams actually need and helping global technology companies build meaningful presence in the market.</strong></p>
+            <p data-reveal data-delay="2">Our goal is simple: <strong>make advanced technology easier to access, understand and use in India.</strong></p>
             <p data-reveal data-delay="2">And build the relationships that make it useful long after the first installation.</p>
           </div>
         </div>

@@ -219,20 +219,21 @@
 .page-hero-content p { max-width: 43rem; color: color-mix(in oklch,var(--paper) 72%,transparent); font-size: clamp(1.05rem,1.5vw,1.25rem); }
 .page-hero-arrow { margin-top: 3rem; }
 
-.story-section { padding-block: clamp(6.5rem,10vw,9.5rem) 0; }
+.story-section { padding-block: clamp(4rem,6vw,6rem) 0; }
 .story-grid { display: grid; grid-template-columns: minmax(0,7fr) minmax(21rem,5fr); gap: clamp(3rem,6vw,7rem); align-items: center; }
 .story-map { margin: 0; }
 .story-map img { width: 100%; height: auto; }
 .story-map figcaption { display: flex; flex-wrap: wrap; gap: .6rem 2rem; justify-content: space-between; margin-top: 1.5rem; padding-top: 1.1rem; border-top: 1px solid var(--line); color: var(--steel); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
-.story-copy > .eyebrow { margin-bottom: 1.6rem; }
-.story-copy h2 { max-width: 20ch; font-size: clamp(2.7rem,5vw,4.6rem); letter-spacing: -.045em; }
-.story-copy .lead { margin-top: 1.9rem; color: var(--ink); font-size: clamp(1.1rem,1.6vw,1.35rem); line-height: 1.55; }
-.story-copy p { margin-top: 1.5rem; color: var(--steel); }
+.story-copy > .eyebrow { margin-bottom: 1rem; }
+.story-copy h2 { max-width: 22ch; font-size: clamp(2.25rem,3.6vw,3.7rem); letter-spacing: -.045em; }
+.story-copy .lead { margin-top: 1.2rem; color: var(--ink); font-size: clamp(1rem,1.3vw,1.16rem); line-height: 1.55; }
+.story-copy p { margin-top: .9rem; color: var(--steel); font-size: .94rem; line-height: 1.55; }
+.story-copy p strong { color: var(--ink); font-weight: 600; }
 .story-signature { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1.1rem; margin-top: 2.6rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
 .story-signature strong { font-family: var(--font-display); font-size: 1.05rem; }
 .story-signature span { color: var(--steel); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
 
-.stats { display: grid; grid-template-columns: repeat(4,1fr); margin-top: clamp(3.5rem,6vw,5.5rem); border: 1px solid var(--line); }
+.stats { display: grid; grid-template-columns: repeat(4,1fr); margin-top: clamp(2.5rem,4vw,4rem); border: 1px solid var(--line); }
 .stats > div { padding: clamp(1.6rem,2.4vw,2.2rem) clamp(1.25rem,2vw,2rem); border-right: 1px solid var(--line); }
 .stats > div:last-child { border-right: 0; }
 .stats strong { display: block; font-family: var(--font-display); font-size: clamp(1.7rem,2.7vw,2.5rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; }
