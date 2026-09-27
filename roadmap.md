@@ -2,7 +2,10 @@
 - [x] Remove homepage Applications and Solution Finder
 - [x] Replace first three product entries and imagery
 - [x] Rebuild three product detail pages from manufacturer references
-- [ ] Verify the featured slideshow and first three pages in desktop and mobile views
-- [ ] Update Our Story and Scientific Systems heading
-- [ ] Add SALD, fuel cell, nanoCOAT, and OCTOMAG cards and detail pages
-- [ ] Verify all seven products and responsive layouts
+- [x] Verify the featured slideshow and first three pages in desktop and mobile views
+- [x] Update Our Story and Scientific Systems heading
+- [x] Add SALD, fuel cell, nanoCOAT, and OCTOMAG cards and detail pages
+- [x] Verify all seven products and responsive layouts
+- [ ] Tighten Our Story copy and spacing; suppress featured-video captions where YouTube permits
+- [ ] Add four new system cards and dedicated product pages using supplied images
+- [ ] Test all navigation, media, page layouts and product details on desktop and mobile
