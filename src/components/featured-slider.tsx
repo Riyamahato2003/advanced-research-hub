@@ -23,7 +23,7 @@ export function FeaturedSlider() {
           <iframe
             key={s.id}
             className={i === active ? "is-active" : ""}
-            src={`https://www.youtube-nocookie.com/embed/${s.id}?autoplay=1&mute=1&loop=1&playlist=${s.id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&fs=0`}
+            src={`https://www.youtube-nocookie.com/embed/${s.id}?autoplay=1&mute=1&loop=1&playlist=${s.id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0`}
             title={`${s.title} video`}
             allow="autoplay; encrypted-media"
             tabIndex={-1}
