@@ -186,6 +186,7 @@
 .wordmark { display: flex; align-items: center; gap: .65rem; font-family: var(--font-display); }
 .wordmark span { display: grid; width: 2.35rem; height: 2.35rem; place-items: center; border: 1px solid currentColor; font-size: .8rem; font-weight: 700; }
 .wordmark strong { font-size: .82rem; letter-spacing: .09em; }
+.wordmark img { width: 2.4rem; height: 2.4rem; object-fit: contain; }
 .desktop-nav { display: flex; justify-content: center; align-items: stretch; gap: clamp(.8rem,1.5vw,1.55rem); }
 .desktop-nav > a, .mega-trigger > a { display: flex; align-items: center; gap: .25rem; min-height: 5.75rem; font-size: .75rem; font-weight: 500; transition: color .2s; }
 .desktop-nav > a:hover, .mega-trigger > a:hover { color: var(--brand); }
@@ -199,8 +200,10 @@
 .mega-grid { display: grid; grid-template-columns: repeat(3,1fr); }
 .mega-grid > a { min-height: 9rem; padding: 1rem 1.4rem; border-left: 1px solid var(--line); transition: background .2s; }
 .mega-grid > a:hover { background: var(--mist); }
+.mega-grid > .mega-item { min-height: 6.5rem; padding: 1rem 1.4rem; border-left: 1px solid var(--line); }
 .mega-grid small { color: var(--brand); }
 .mega-grid span { display: block; margin: .7rem 0 .45rem; font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; }
+.mega-item span { line-height: 1.3; }
 .mega-grid p { color: var(--steel); font-size: .75rem; line-height: 1.5; }
 
 .home-hero, .page-hero { position: relative; overflow: hidden; background: var(--night); color: var(--paper); }
@@ -320,6 +323,30 @@
 .partner-row h3 { margin: 2.8rem 0 .5rem; font-size: 1.55rem; }
 .partner-row p { color: var(--steel); font-size: .82rem; }
 .partner-row:hover p { color: color-mix(in oklch,var(--paper) 65%,transparent); }
+.about-hero > img { filter: blur(3px) brightness(.72); transform: scale(1.015); }
+.about-intro { display: grid; grid-template-columns: minmax(16rem,4fr) minmax(0,7fr); gap: clamp(3rem,8vw,9rem); align-items: start; }
+.founder-portrait { margin: 0; border: 1px solid var(--line); padding: .8rem; }
+.founder-portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%; }
+.founder-portrait figcaption { display: grid; gap: .2rem; padding: 1.4rem .5rem .5rem; }
+.founder-portrait strong { font-family: var(--font-display); font-size: 1.2rem; }
+.founder-portrait span { color: var(--steel); font-size: .75rem; text-transform: uppercase; }
+.about-copy h2, .about-support h2, .about-closing h2 { margin: 1rem 0 2rem; font-size: clamp(2.5rem,4.5vw,4.8rem); }
+.about-copy p, .about-support p, .about-closing p { max-width: 46rem; margin-top: 1.3rem; color: var(--steel); font-size: 1.06rem; }
+.about-support { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(3rem,7vw,8rem); align-items: center; }
+.about-support figure { margin: 0; overflow: hidden; }
+.about-support img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.about-closing { max-width: 65rem; }
+.about-closing .closing-line { margin-top: 2.5rem; color: var(--ink); font-family: var(--font-display); font-size: clamp(1.5rem,2.8vw,2.5rem); line-height: 1.3; }
+.customer-intro { display: grid; grid-template-columns: 5fr 6fr; gap: 8vw; align-items: end; margin-bottom: 4rem; }
+.customer-intro h2 { font-size: clamp(2.5rem,4.5vw,4.5rem); }
+.customer-intro p { color: var(--steel); }
+.customer-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.customer-grid article { min-height: 11rem; padding: 1.7rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .35s var(--ease); }
+.customer-grid article:hover { background: var(--mist); }
+.customer-grid small { color: var(--brand); }
+.customer-grid h3 { margin-top: 2.5rem; font-size: clamp(1.4rem,2vw,2rem); }
+@media (max-width: 800px) { .about-intro, .about-support, .customer-intro { grid-template-columns: 1fr; } .customer-grid { grid-template-columns: repeat(2,1fr); } .founder-portrait { max-width: 27rem; } }
+@media (max-width: 520px) { .customer-grid { grid-template-columns: 1fr; } }
 
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .contact-form label { display: grid; gap: .5rem; color: var(--steel); font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }

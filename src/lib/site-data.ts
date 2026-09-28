@@ -10,6 +10,7 @@ import ionCard from "@/assets/image-15.png.asset.json";
 import pvdCard from "@/assets/image-17.png.asset.json";
 import chemCard from "@/assets/image-19.png.asset.json";
 import pilotCard from "@/assets/image-21.png.asset.json";
+import rollCard from "@/assets/image-22.png.asset.json";
 
 /**
  * Photography supplied by NB Instrument, served from the project asset store.
@@ -43,6 +44,7 @@ export const products = [
   { slug: "nordiko-2000-2550-pvd-systems", name: "2000 & 2550 PVD Systems", category: "Physical Vapour Deposition Systems", line: "Flexible automatic batch-load sputtering systems.", image: pvdCard.url },
   { slug: "nanochem", name: "nanoCHEM", category: "Wet Processing Systems", line: "Configurable developing, cleaning, etching and lift-off.", image: chemCard.url },
   { slug: "sald-sheet-to-sheet-spatial-ald-pilot-platform", name: "SALD Sheet-to-Sheet Spatial ALD Pilot Platform", category: "Atomic Layer Deposition Systems", line: "Pilot-scale spatial ALD for large-area substrates.", image: pilotCard.url },
+  { slug: "sald-roll-to-roll-spatial-ald-manufacturing-platform", name: "SALD Roll-to-Roll Spatial ALD Manufacturing Platform", category: "Atomic Layer Deposition Systems", line: "High-Throughput Roll-to-Roll Spatial ALD", image: rollCard.url },
 ];
 
 export const applications = [
@@ -65,9 +67,9 @@ export const contact = {
 export const partners = [
   { slug: "sald", name: "SALD", country: "Netherlands", focus: "Spatial atomic layer deposition" },
   { slug: "parteq", name: "ParteQ GmbH", country: "Germany", focus: "Advanced research technology" },
-  { slug: "sint-technology", name: "SINT Technology S.r.l.", country: "Italy", focus: "Measurement and materials testing" },
+  { slug: "teer-coatings", name: "TEER Coatings Ltd", country: "UK", focus: "Advanced surface engineering solutions" },
   { slug: "pg-instruments", name: "P.G. Instruments Ltd.", country: "United Kingdom", focus: "Analytical instrumentation" },
-  { slug: "thesix-solutions", name: "Thesix Solutions Technology", country: "Canada", focus: "Scientific systems" },
+  { slug: "ultech", name: "ULTECH Co. Ltd", country: "Korea", focus: "Leading company of semiconductor manufacturing equipment specialist" },
   { slug: "genicore", name: "GeniCore", country: "Poland", focus: "Spark plasma sintering" },
   { slug: "nordiko", name: "Nordiko Technical Service", country: "United Kingdom", focus: "Thin-film deposition" },
   { slug: "nippon-instruments", name: "Nippon Instruments Corporation", country: "Japan", focus: "Analytical instruments" },

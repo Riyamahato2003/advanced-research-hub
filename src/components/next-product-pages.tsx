@@ -8,6 +8,8 @@ import chemCard from "@/assets/image-19.png.asset.json";
 import chemHero from "@/assets/image-20.png.asset.json";
 import pilotCard from "@/assets/image-21.png.asset.json";
 import pilotHero from "@/assets/sheet-ald.webp.asset.json";
+import rollCard from "@/assets/image-22.png.asset.json";
+import rollHero from "@/assets/image-23.png.asset.json";
 
 function Hero({ category, title, intro, image, alt }: { category: string; title: string; intro: string; image: string; alt: string }) {
   return <section className="pd-hero"><img src={image} alt={alt} fetchPriority="high" /><div className="container"><Eyebrow>{category}</Eyebrow><h1>{title}</h1><p>{intro}</p><div className="hero-actions"><ActionLink to="/contact" tone="light">Discuss your requirement</ActionLink></div></div></section>;
@@ -71,6 +73,18 @@ export function SaldPilotPage() {
     <Specs title="Pilot platform specification." rows={[["Deposition Technology", "Spatial Atomic Layer Deposition"], ["Process Mode", "Atmospheric pressure"], ["Substrate Format", "Large-area sheet-to-sheet"], ["Throughput", "Pilot-scale continuous processing"], ["Materials", "SnOx, NiOx, Al₂O₃, AZO and other functional oxides"], ["Handling", "Automated conveyor-based substrate transport"], ["Automation", "PLC controlled with recipe management"], ["Safety", "Integrated industrial safety systems"]]} />
     <Applications title="From energy to functional surfaces." items={["Perovskite & Tandem Solar Cells", "Photovoltaic Pilot Manufacturing", "Semiconductor Process Scale-Up", "Barrier & Passivation Coatings", "Functional Oxide Thin Films", "Industrial R&D and Process Transfer"]} />
     <section className="pd-section"><div className="container pd-split rev"><figure className="pd-figure" data-reveal="image"><img src={pilotHero.url} alt="Continuous coating process for large-area substrates" loading="lazy" /></figure><div data-reveal><Eyebrow>Technologies</Eyebrow><h2>Thin Film & PVD Coating. Nanotechnology & Nanomaterials.</h2><p>Explore the connected research environments behind functional thin-film processes.</p><ActionLink to="/technologies/thin-film-vacuum" tone="outline">Explore thin film technology</ActionLink></div></div></section>
+    <ContactBand />
+  </main>;
+}
+
+export function SaldRollToRollPage() {
+  return <main>
+    <Hero category="Atomic Layer Deposition Systems · SALD" title="SALD Roll-to-Roll Spatial ALD Manufacturing Platform" intro="High-Throughput Roll-to-Roll Spatial ALD" image={rollHero.url} alt="Flexible foil passing through a roll-to-roll coating line" />
+    <Intro eyebrow="Overview" title="High-Throughput Roll-to-Roll Spatial ALD" paragraphs={["A high-throughput continuous deposition system engineered for industrial-scale coating of flexible substrates. Patented Spatial Atomic Layer Deposition technology delivers dense, uniform and conformal films at roll-to-roll production speeds for flexible photovoltaics, encapsulation barrier films and flexible electronics."]} image={rollCard.url} alt="SALD roll-to-roll spatial ALD manufacturing platform" />
+    <Features eyebrow="Key features" title="Continuous coating, production scale." items={[["High-Throughput Roll-to-Roll Processing", "Continuous deposition for industrial-scale flexible web production."], ["Industrial-Grade Encapsulation", "Dense, uniform barrier coatings for demanding applications."], ["Flexible Substrate Compatibility", "Designed for polymer films and flexible web formats."], ["Production-Scale Automation", "PLC-controlled production with recipe management."]]} />
+    <Specs title="Roll-to-roll platform specification." rows={[["Deposition Technology", "Roll-to-Roll Spatial Atomic Layer Deposition"], ["Process Mode", "Atmospheric pressure continuous coating"], ["Substrate Format", "Flexible web / polymer film"], ["Throughput", "High-speed industrial-scale production"], ["Materials", "Al₂O₃, SnOx, NiOx, AZO and barrier oxides"], ["Web Handling", "Precision tension and speed control"], ["Automation", "PLC controlled with recipe management"], ["Safety", "Integrated industrial safety systems"]]} />
+    <Applications title="Functional films on flexible materials." items={["Flexible Photovoltaics", "Encapsulation Barrier Films", "Flexible Electronics Manufacturing", "OLED & Display Encapsulation", "Functional Coatings on Polymer Films", "Advanced Packaging & Barrier Applications"]} />
+    <section className="pd-section"><div className="container pd-split rev"><figure className="pd-figure" data-reveal="image"><img src={rollHero.url} alt="Flexible web moving through a continuous spatial ALD process" loading="lazy" /></figure><div data-reveal><Eyebrow>Technologies</Eyebrow><h2>Thin Film & PVD Coating.</h2><p>Discover the related thin-film deposition technology environment.</p><ActionLink to="/technologies/thin-film-vacuum" tone="outline">Explore thin film technology</ActionLink></div></div></section>
     <ContactBand />
   </main>;
 }
