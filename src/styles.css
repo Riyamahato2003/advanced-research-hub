@@ -186,6 +186,7 @@
 .wordmark { display: flex; align-items: center; gap: .65rem; font-family: var(--font-display); }
 .wordmark span { display: grid; width: 2.35rem; height: 2.35rem; place-items: center; border: 1px solid currentColor; font-size: .8rem; font-weight: 700; }
 .wordmark strong { font-size: .82rem; letter-spacing: .09em; }
+.wordmark img { width: 2.4rem; height: 2.4rem; object-fit: contain; }
 .desktop-nav { display: flex; justify-content: center; align-items: stretch; gap: clamp(.8rem,1.5vw,1.55rem); }
 .desktop-nav > a, .mega-trigger > a { display: flex; align-items: center; gap: .25rem; min-height: 5.75rem; font-size: .75rem; font-weight: 500; transition: color .2s; }
 .desktop-nav > a:hover, .mega-trigger > a:hover { color: var(--brand); }
@@ -199,6 +200,7 @@
 .mega-grid { display: grid; grid-template-columns: repeat(3,1fr); }
 .mega-grid > a { min-height: 9rem; padding: 1rem 1.4rem; border-left: 1px solid var(--line); transition: background .2s; }
 .mega-grid > a:hover { background: var(--mist); }
+.mega-grid > .mega-item { min-height: 6.5rem; padding: 1rem 1.4rem; border-left: 1px solid var(--line); }
 .mega-grid small { color: var(--brand); }
 .mega-grid span { display: block; margin: .7rem 0 .45rem; font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; }
 .mega-grid p { color: var(--steel); font-size: .75rem; line-height: 1.5; }
