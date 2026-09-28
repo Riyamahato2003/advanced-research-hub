@@ -6,6 +6,10 @@
 - [x] Update Our Story and Scientific Systems heading
 - [x] Add SALD, fuel cell, nanoCOAT, and OCTOMAG cards and detail pages
 - [x] Verify all seven products and responsive layouts
-- [ ] Tighten Our Story copy and spacing; suppress featured-video captions where YouTube permits
-- [ ] Add four new system cards and dedicated product pages using supplied images
-- [ ] Test all navigation, media, page layouts and product details on desktop and mobile
+- [x] Tighten Our Story copy and spacing; suppress featured-video captions where YouTube permits
+- [x] Add four new system cards and dedicated product pages using supplied images
+- [x] Test all navigation, media, page layouts and product details on desktop and mobile
+- [ ] Add SALD roll-to-roll system card and dedicated product page
+- [ ] Remove Solutions and Resources; add Customers; update technology menu, About, Partners, logo and favicon
+- [ ] Add route-level SEO, structured data, sitemap and crawler directives
+- [ ] Verify routes, media, navigation and responsive layout
