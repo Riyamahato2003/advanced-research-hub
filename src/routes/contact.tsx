@@ -5,7 +5,7 @@ import { images, contact } from "@/lib/site-data";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Contact NB Instrument — Discuss Your Technology Requirement", "Contact NB Instrument in New Delhi to discuss a research requirement, system configuration, installation or technical support."),
+  head: () => seo("Contact NB Instrument — Discuss Your Technology Requirement", "Contact NB Instrument in New Delhi to discuss a research requirement, system configuration, installation or technical support.", "/contact"),
   component: () => (
     <main>
       <PageHero eyebrow="Contact" title="Let's discuss your technology requirement." intro="Start with the research objective. Our technical team will help map it to the right technology path." image={images.plasmaImage} />
