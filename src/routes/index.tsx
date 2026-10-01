@@ -16,6 +16,8 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://advanced-research-hub.lovable.app/" }],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"name":"NB Instrument Pvt. Ltd.","url":"https://advanced-research-hub.lovable.app","email":"contact@nbinstrument.in","telephone":"011-46056867","address":{"@type":"PostalAddress","streetAddress":"Gulmohar Commercial Complex, B-2A, B-3, Rakesh Deep Building 11, Yusuf Sarai","addressLocality":"New Delhi","postalCode":"110057","addressCountry":"IN"}}) }],
   }),
   component: HomePage,
 });
