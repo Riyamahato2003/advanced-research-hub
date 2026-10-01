@@ -9,7 +9,8 @@
 - [x] Tighten Our Story copy and spacing; suppress featured-video captions where YouTube permits
 - [x] Add four new system cards and dedicated product pages using supplied images
 - [x] Test all navigation, media, page layouts and product details on desktop and mobile
-- [ ] Add SALD roll-to-roll system card and dedicated product page
-- [ ] Remove Solutions and Resources; add Customers; update technology menu, About, Partners, logo and favicon
-- [ ] Add route-level SEO, structured data, sitemap and crawler directives
-- [ ] Verify routes, media, navigation and responsive layout
+- [x] Add SALD roll-to-roll system card and dedicated product page
+- [x] Remove Solutions and Resources; add Customers; update technology menu, About, Partners, logo and favicon
+- [x] Add route-level SEO, structured data, sitemap and crawler directives
+- [x] Verify routes, media, navigation and responsive layout
+- [x] Apply Oct 1 image, dropdown, page and video updates
