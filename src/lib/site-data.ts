@@ -56,6 +56,8 @@ export const applications = [
   { slug: "materials-characterization", name: "Materials Characterization", summary: "Connect composition and structure to material performance.", image: photonicsImage },
   { slug: "plasma-processing", name: "Plasma Processing", summary: "Use controlled plasma environments for deposition and surface engineering.", image: plasmaImage },
   { slug: "photonics", name: "Photonics", summary: "Enable optical measurement, light–matter research and precision experiments.", image: photonicsImage },
+  { slug: "surface-engineering-coatings", name: "Surface Engineering & Coatings", summary: "Develop wear-resistant, functional and decorative coatings for demanding surfaces.", image: heroImage },
+  { slug: "energy-electrochemical-materials", name: "Energy & Electrochemical Materials", summary: "Advance fuel cell, battery and electrochemical materials research.", image: labImage },
 ];
 
 export const contact = {
