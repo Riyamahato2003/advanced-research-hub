@@ -8,7 +8,7 @@ import { seo } from "@/lib/seo";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/about")({
-  head: () => seo("About NB Instrument — Engineering Technology for India", "Led by Mr. Nitay Kumar Mahato, NB Instrument connects advanced scientific technologies with research and manufacturing in India through technical support and long-term partnerships."),
+  head: () => seo("About NB Instrument — Engineering Technology for India", "Led by Mr. Nitay Kumar Mahato, NB Instrument connects advanced scientific technologies with research and manufacturing in India through technical support and long-term partnerships.", "/about"),
   component: AboutPage,
 });
 
@@ -41,6 +41,7 @@ function AboutPage() {
           <h2>Built around long-term technical partnerships.</h2>
           <p>Our partnerships span specialised manufacturers across Europe, the UK, Israel, Japan, Korea and other technology hubs. We work with each partner closely to bring technologies that solve real problems in research, manufacturing and industrial development.</p>
           <p className="closing-line">We believe good equipment gets a customer started. Good engineering support keeps them moving.</p>
+          </div>
         </div>
       </section>
     </main>

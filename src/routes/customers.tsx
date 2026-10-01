@@ -17,7 +17,7 @@ const institutions = [
 ];
 
 export const Route = createFileRoute("/customers")({
-  head: () => seo("Customers — Research Institutions | NB Instrument", "NB Instrument works across India's research and industrial ecosystem, including leading scientific and engineering institutions."),
+  head: () => seo("Customers — Research Institutions | NB Instrument", "NB Instrument works across India's research and industrial ecosystem, including leading scientific and engineering institutions.", "/customers"),
   component: CustomersPage,
 });
 

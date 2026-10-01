@@ -4,7 +4,7 @@ import heroImg from "@/assets/image-31.png.asset.json";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/applications/")({
-  head: () => seo("Applications — Research Outcomes | NB Instrument", "Explore NB Instrument technologies by research outcome: thin films, semiconductor R&D, surface science, EPR, nanotechnology, characterization, plasma and photonics."),
+  head: () => seo("Applications — Research Outcomes | NB Instrument", "Explore NB Instrument technologies by research outcome: thin films, semiconductor R&D, surface science, EPR, nanotechnology, characterization, plasma and photonics.", "/applications"),
   component: () => (
     <main>
       <PageHero eyebrow="Applications" title="Technology Built Around Your Research" intro="From thin film deposition and surface engineering to semiconductor processing, advanced materials and magnetic research, connect your research objective with the right technology, process and instrumentation." image={heroImg.url} />

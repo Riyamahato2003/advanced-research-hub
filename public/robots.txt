@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://advanced-research-hub.lovable.app/sitemap.xml

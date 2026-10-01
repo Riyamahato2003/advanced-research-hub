@@ -5,7 +5,7 @@ import { images, partners } from "@/lib/site-data";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/partners/")({
-  head: () => seo("Partners — Technology Without Borders | NB Instrument", "The international technology companies NB Instrument represents in India, across deposition, spectroscopy, analytical instrumentation, vacuum and nanotechnology."),
+  head: () => seo("Partners — Technology Without Borders | NB Instrument", "The international technology companies NB Instrument represents in India, across deposition, spectroscopy, analytical instrumentation, vacuum and nanotechnology.", "/partners"),
   component: () => (
     <main>
       <PageHero eyebrow="Partners" title="Technology without borders." intro="Specialised manufacturers from Europe, North America, Israel and Japan — connected to India's research ecosystem through one technical partner." image={heroImg.url} />

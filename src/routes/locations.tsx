@@ -5,7 +5,7 @@ import { images, contact } from "@/lib/site-data";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/locations")({
-  head: () => seo("Locations — NB Instrument, New Delhi", "NB Instrument's head office in New Delhi and pan-India technical reach for research institutions and industrial R&D."),
+  head: () => seo("Locations — NB Instrument, New Delhi", "NB Instrument's head office in New Delhi and pan-India technical reach for research institutions and industrial R&D.", "/locations"),
   component: () => (
     <main>
       <PageHero eyebrow="Locations" title="New Delhi, with pan-India reach." intro="Our head office coordinates technical support for research institutions across the country." image={images.photonicsImage} />
