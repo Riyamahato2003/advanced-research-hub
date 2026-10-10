@@ -14,6 +14,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "NB Instrument — Technology Partners for Advanced Research" },
       { property: "og:description", content: "Advanced international technologies, technical understanding and application-focused support for research in India." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://advanced-research-hub.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://advanced-research-hub.lovable.app/" }],
@@ -41,7 +42,7 @@ function HomePage() {
           <h1>Advanced technology.<br /><em>Engineered for research.</em></h1>
           <p>NB Instrument connects India’s research and innovation ecosystem with advanced scientific technologies and application-focused technical expertise.</p>
           <div className="hero-actions">
-            <ActionLink to="/technologies" tone="light">Explore technologies</ActionLink>
+            <ActionLink to="/#technology-portfolio" tone="light">Explore technologies</ActionLink>
             <ActionLink to="/contact" tone="outline">Discuss your requirement</ActionLink>
           </div>
           <span className="scroll-cue"><ArrowDown />Scroll to explore</span>
@@ -75,7 +76,7 @@ function HomePage() {
         </div>
 
         <div className="container stats" data-reveal>
-          <div><strong>18+</strong><span>Years of experience</span></div>
+          <div><strong>20+</strong><span>Years of experience</span></div>
           <div><strong>13</strong><span>Technology partners</span></div>
           <div><strong>12,028+</strong><span>Indian clients</span></div>
           <div><strong>28</strong><span>Industry awards</span></div>
