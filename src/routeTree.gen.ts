@@ -18,8 +18,6 @@ import { Route as ApplicationsIndexRouteImport } from './routes/applications.ind
 import { Route as PartnersIndexRouteImport } from './routes/partners.index'
 import { Route as ProductsIndexRouteImport } from './routes/products.index'
 import { Route as ProductsProductRouteImport } from './routes/products.$product'
-import { Route as TechnologiesIndexRouteImport } from './routes/technologies.index'
-import { Route as TechnologiesSlugRouteImport } from './routes/technologies.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -66,16 +64,6 @@ const ProductsProductRoute = ProductsProductRouteImport.update({
   path: '/products/$product',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TechnologiesIndexRoute = TechnologiesIndexRouteImport.update({
-  id: '/technologies/',
-  path: '/technologies/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TechnologiesSlugRoute = TechnologiesSlugRouteImport.update({
-  id: '/technologies/$slug',
-  path: '/technologies/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -84,11 +72,9 @@ export interface FileRoutesByFullPath {
   '/customers': typeof CustomersRoute
   '/locations': typeof LocationsRoute
   '/products/$product': typeof ProductsProductRoute
-  '/technologies/$slug': typeof TechnologiesSlugRoute
   '/applications/': typeof ApplicationsIndexRoute
   '/partners/': typeof PartnersIndexRoute
   '/products/': typeof ProductsIndexRoute
-  '/technologies/': typeof TechnologiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -97,11 +83,9 @@ export interface FileRoutesByTo {
   '/customers': typeof CustomersRoute
   '/locations': typeof LocationsRoute
   '/products/$product': typeof ProductsProductRoute
-  '/technologies/$slug': typeof TechnologiesSlugRoute
   '/applications': typeof ApplicationsIndexRoute
   '/partners': typeof PartnersIndexRoute
   '/products': typeof ProductsIndexRoute
-  '/technologies': typeof TechnologiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -111,11 +95,9 @@ export interface FileRoutesById {
   '/customers': typeof CustomersRoute
   '/locations': typeof LocationsRoute
   '/products/$product': typeof ProductsProductRoute
-  '/technologies/$slug': typeof TechnologiesSlugRoute
   '/applications/': typeof ApplicationsIndexRoute
   '/partners/': typeof PartnersIndexRoute
   '/products/': typeof ProductsIndexRoute
-  '/technologies/': typeof TechnologiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -126,11 +108,9 @@ export interface FileRouteTypes {
     | '/customers'
     | '/locations'
     | '/products/$product'
-    | '/technologies/$slug'
     | '/applications/'
     | '/partners/'
     | '/products/'
-    | '/technologies/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -139,11 +119,9 @@ export interface FileRouteTypes {
     | '/customers'
     | '/locations'
     | '/products/$product'
-    | '/technologies/$slug'
     | '/applications'
     | '/partners'
     | '/products'
-    | '/technologies'
   id:
     | '__root__'
     | '/'
@@ -152,11 +130,9 @@ export interface FileRouteTypes {
     | '/customers'
     | '/locations'
     | '/products/$product'
-    | '/technologies/$slug'
     | '/applications/'
     | '/partners/'
     | '/products/'
-    | '/technologies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -166,11 +142,9 @@ export interface RootRouteChildren {
   CustomersRoute: typeof CustomersRoute
   LocationsRoute: typeof LocationsRoute
   ProductsProductRoute: typeof ProductsProductRoute
-  TechnologiesSlugRoute: typeof TechnologiesSlugRoute
   ApplicationsIndexRoute: typeof ApplicationsIndexRoute
   PartnersIndexRoute: typeof PartnersIndexRoute
   ProductsIndexRoute: typeof ProductsIndexRoute
-  TechnologiesIndexRoute: typeof TechnologiesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -238,20 +212,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsProductRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/technologies/': {
-      id: '/technologies/'
-      path: '/technologies'
-      fullPath: '/technologies/'
-      preLoaderRoute: typeof TechnologiesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/technologies/$slug': {
-      id: '/technologies/$slug'
-      path: '/technologies/$slug'
-      fullPath: '/technologies/$slug'
-      preLoaderRoute: typeof TechnologiesSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -262,11 +222,9 @@ const rootRouteChildren: RootRouteChildren = {
   CustomersRoute: CustomersRoute,
   LocationsRoute: LocationsRoute,
   ProductsProductRoute: ProductsProductRoute,
-  TechnologiesSlugRoute: TechnologiesSlugRoute,
   ApplicationsIndexRoute: ApplicationsIndexRoute,
   PartnersIndexRoute: PartnersIndexRoute,
   ProductsIndexRoute: ProductsIndexRoute,
-  TechnologiesIndexRoute: TechnologiesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
