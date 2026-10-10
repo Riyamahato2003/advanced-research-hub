@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 Product detail routes render dedicated product-page components while product cards share the site-data list and ProductGrid; this keeps the established card design consistent without forcing every system into a generic detail template.
+
+Technology portfolio data is shared between display-only rows and application imagery; removed technology routes are not recreated, and remaining technology calls to action scroll to the homepage portfolio. This preserves the portfolio experience without obsolete destinations.
