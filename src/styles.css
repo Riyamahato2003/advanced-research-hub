@@ -188,8 +188,8 @@
 .wordmark strong { font-size: .82rem; letter-spacing: .09em; }
 .wordmark img { width: 2.4rem; height: 2.4rem; object-fit: contain; }
 .desktop-nav { display: flex; justify-content: center; align-items: stretch; gap: clamp(.8rem,1.5vw,1.55rem); }
-.desktop-nav > a, .mega-trigger > a { display: flex; align-items: center; gap: .25rem; min-height: 5.75rem; font-size: .75rem; font-weight: 500; transition: color .2s; }
-.desktop-nav > a:hover, .mega-trigger > a:hover { color: var(--brand); }
+.desktop-nav > a, .mega-trigger > :is(a, button) { display: flex; align-items: center; gap: .25rem; min-height: 5.75rem; font-size: .75rem; font-weight: 500; transition: color .2s; }
+.desktop-nav > a:hover, .mega-trigger > :is(a, button):hover { color: var(--brand); }
 .nav-cta { min-height: 2.8rem; white-space: nowrap; }
 .menu-button { display: none; border: 0; background: transparent; color: inherit; padding: .5rem; }
 .mega-trigger { position: static; }
@@ -444,9 +444,9 @@
 [data-reveal][data-delay="2"] { transition-delay: .24s; }
 
 /* Navigation indicator */
-.desktop-nav > a, .mega-trigger > a { position: relative; }
-.desktop-nav > a::after, .mega-trigger > a::after { content: ""; position: absolute; left: 0; right: 100%; top: calc(50% + 1rem); height: 1px; background: var(--brand); transition: right .45s var(--ease); }
-.desktop-nav > a:hover::after, .mega-trigger > a:hover::after, .mega-trigger.is-open > a::after { right: 0; }
+.desktop-nav > a, .mega-trigger > :is(a, button) { position: relative; }
+.desktop-nav > a::after, .mega-trigger > :is(a, button)::after { content: ""; position: absolute; left: 0; right: 100%; top: calc(50% + 1rem); height: 1px; background: var(--brand); transition: right .45s var(--ease); }
+.desktop-nav > a:hover::after, .mega-trigger > :is(a, button):hover::after, .mega-trigger.is-open > :is(a, button)::after { right: 0; }
 
 /* Hover polish */
 .product-card { transition: transform .5s var(--ease); }
@@ -565,3 +565,7 @@
 .closing-frame { margin: 0; position: relative; padding: .9rem; border: 1px solid var(--line); background: var(--paper); }
 .closing-frame img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 @media (max-width: 800px) { .about-closing.with-image { grid-template-columns: 1fr; } .closing-frame img { aspect-ratio: 4/3; } }
+
+.technology-trigger { height: auto; padding: 0; border-radius: 0; background: transparent; color: inherit; box-shadow: none; font-family: inherit; text-decoration: none; }
+.technology-trigger:hover { background: transparent; }
+.mobile-technology-trigger { display: flex; width: 100%; justify-content: space-between; height: auto; padding: 1rem 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; color: inherit; font-family: var(--font-display); font-size: 1.35rem; }
