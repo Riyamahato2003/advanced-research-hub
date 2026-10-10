@@ -14,3 +14,6 @@
 - [x] Add route-level SEO, structured data, sitemap and crawler directives
 - [x] Verify routes, media, navigation and responsive layout
 - [x] Apply Oct 1 image, dropdown, page and video updates
+- [ ] Apply Oct 10 statistic, technology and application images, display-only menu/portfolio, route retirement and LinkedIn
+- [ ] Audit retained-page SEO and verify desktop/mobile navigation, imagery and product pages
+- [ ] Application 10 image and About background — awaiting next user upload
