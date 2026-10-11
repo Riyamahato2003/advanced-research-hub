@@ -14,7 +14,7 @@
 - [x] Add route-level SEO, structured data, sitemap and crawler directives
 - [x] Verify routes, media, navigation and responsive layout
 - [x] Apply Oct 1 image, dropdown, page and video updates
-- [ ] Apply Oct 10 statistic, technology and application images, display-only menu/portfolio, route retirement and LinkedIn
-- [ ] Audit retained-page SEO and verify desktop/mobile navigation, imagery and product pages
-- [ ] Application 10 image and About background — awaiting next user upload
-- [ ] Apply Oct 11 six-item portfolio, Application 3/10 images, About background and Spatial ALD dropdown wording; verify desktop/mobile
+- [x] Apply Oct 10 statistic, technology and application images, display-only menu/portfolio, route retirement and LinkedIn
+- [x] Audit retained-page SEO and verify desktop/mobile navigation, imagery and all 12 product routes; three pre-existing external HEX images failed, left unchanged per scope
+- [x] Apply supplied Application 10 image and About background
+- [x] Apply Oct 11 six-item portfolio, Application 3/10 images, About background and Spatial ALD dropdown wording; verify desktop/mobile
