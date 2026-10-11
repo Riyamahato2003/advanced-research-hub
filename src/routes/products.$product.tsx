@@ -6,17 +6,20 @@ import { HexPage, PulsedEprPage, UfastPage } from "@/components/product-pages";
 import { SaldPage, FuelCellPage, NanoCoatPage, OctomagPage } from "@/components/more-product-pages";
 import { IonBeamPage, NordikoPvdPage, NanoChemPage, SaldPilotPage, SaldRollToRollPage } from "@/components/next-product-pages";
 import { useReveal } from "@/hooks/use-reveal";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/products/$product")({
   loader: ({ params }) => { const item = products.find((x) => x.slug === params.product); if (!item) throw notFound(); return item; },
-  head: ({ loaderData }) => ({ meta: [
-    { title: `${loaderData?.name ?? "System"} — NB Instrument` },
-    { name: "description", content: loaderData?.line ?? "Scientific system from NB Instrument." },
-    { property: "og:title", content: `${loaderData?.name ?? "System"} — NB Instrument` },
-    { property: "og:description", content: loaderData?.line ?? "Scientific system." },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-  ] }),
+  head: ({ loaderData }) => {
+    if (!loaderData) return { meta: [{ title: "System not found — NB Instrument" }, { name: "robots", content: "noindex" }] };
+    return {
+      ...seo(`${loaderData.name} — NB Instrument`, `${loaderData.line} Explore ${loaderData.category.toLowerCase()} with NB Instrument for research and process development.`, `/products/${loaderData.slug}`),
+      scripts: [{ type: "application/ld+json", children: JSON.stringify({
+        "@context": "https://schema.org", "@type": "Product", name: loaderData.name,
+        description: loaderData.line, category: loaderData.category,
+      }) }],
+    };
+  },
   component: ProductPage,
 });
 
