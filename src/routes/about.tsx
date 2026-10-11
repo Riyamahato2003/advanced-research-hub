@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
-import aboutHero from "@/assets/image-25.png.asset.json";
+import aboutHero from "@/assets/image-46.png.asset.json";
 import founder from "@/assets/image-26.png.asset.json";
 import training from "@/assets/image-27.png.asset.json";
 import partnership from "@/assets/image-35.png.asset.json";

@@ -19,6 +19,8 @@ import category40 from "@/assets/image-40.png.asset.json";
 import category41 from "@/assets/image-41.png.asset.json";
 import category42 from "@/assets/image-42.png.asset.json";
 import category43 from "@/assets/image-43.png.asset.json";
+import vacuumApplication from "@/assets/image-44.png.asset.json";
+import energyApplication from "@/assets/image-45.png.asset.json";
 
 /**
  * Photography supplied by NB Instrument, served from the project asset store.
@@ -38,9 +40,6 @@ export const technologies: Technology[] = [
   { slug: "magnetic-spin", name: "Magnetic & Spin Science", number: "04", summary: "High-sensitivity systems for magnetic resonance and spin research.", details: "Specialized electron spin resonance and magnetic science instrumentation for demanding research environments.", topics: ["ESR / EPR", "Magnetic systems", "Spin science", "Field control"], image: category38.url },
   { slug: "photonics", name: "Photonics & Lasers", number: "05", summary: "Precision optical technologies for measurement and research.", details: "Optical and laser-enabled systems selected around application requirements and research outcomes.", topics: ["Laser systems", "Photonics", "Optical technologies", "Precision measurement"], image: category39.url },
   { slug: "semiconductor", name: "Semiconductor & Microfabrication", number: "06", summary: "Process platforms for wafer research and microfabrication workflows.", details: "Equipment supporting semiconductor fabrication, precision wet processing, deposition and process development.", topics: ["Wafer processing", "Wet processing", "Deposition", "Microfabrication"], image: category40.url },
-  { slug: "surface-engineering-coatings", name: "Surface Engineering", number: "07", summary: "Advanced surface engineering solutions for functional and protective coatings.", details: "", topics: [], image: heroImage },
-  { slug: "atomic-layer-deposition", name: "Atomic Layer Deposition", number: "08", summary: "Atomic-precision coatings for research and scale-up.", details: "", topics: [], image: saldCard.url },
-  { slug: "advanced-manufacturing-processing", name: "Advanced Manufacturing / Processing", number: "09", summary: "Specialised systems for advanced materials processing and manufacturing.", details: "", topics: [], image: waferImage },
 ];
 
 export const products = [
@@ -61,14 +60,14 @@ export const products = [
 export const applications = [
   { slug: "thin-film-deposition", name: "Thin Film Deposition", summary: "Engineer controlled films for optical, electronic and protective applications.", image: plasmaImage },
   { slug: "semiconductor-rd", name: "Semiconductor R&D", summary: "Support wafer-scale process development and microfabrication research.", image: category40.url },
-  { slug: "vacuum-surface-science", name: "Vacuum & Surface Science", summary: "Create stable environments for surface preparation and analysis.", image: heroImage },
+  { slug: "vacuum-surface-science", name: "Vacuum & Surface Science", summary: "Create stable environments for surface preparation and analysis.", image: vacuumApplication.url },
   { slug: "epr-magnetic-resonance", name: "EPR / Magnetic Resonance", summary: "Investigate paramagnetic species, free radicals and spin behavior.", image: category38.url },
   { slug: "nanotechnology", name: "Nanotechnology", summary: "Develop and study nanostructures, coatings and functional materials.", image: category41.url },
   { slug: "materials-characterization", name: "Materials Characterization", summary: "Connect composition and structure to material performance.", image: category37.url },
   { slug: "plasma-processing", name: "Plasma Processing", summary: "Use controlled plasma environments for deposition and surface engineering.", image: category42.url },
   { slug: "photonics", name: "Photonics", summary: "Enable optical measurement, light–matter research and precision experiments.", image: category39.url },
   { slug: "surface-engineering-coatings", name: "Surface Engineering & Coatings", summary: "Develop wear-resistant, functional and decorative coatings for demanding surfaces.", image: category43.url },
-  { slug: "energy-electrochemical-materials", name: "Energy & Electrochemical Materials", summary: "Advance fuel cell, battery and electrochemical materials research.", image: labImage },
+  { slug: "energy-electrochemical-materials", name: "Energy & Electrochemical Materials", summary: "Advance fuel cell, battery and electrochemical materials research.", image: energyApplication.url },
 ];
 
 export const contact = {

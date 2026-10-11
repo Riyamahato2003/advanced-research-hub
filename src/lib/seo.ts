@@ -1,7 +1,5 @@
-export const SITE_URL = "https://advanced-research-hub.lovable.app";
-
 export function seo(title: string, description: string, path?: string) {
-  const url = path ? `${SITE_URL}${path}` : undefined;
+  const url = path;
   return {
     meta: [
       { title },
