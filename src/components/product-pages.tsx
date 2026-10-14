@@ -1,13 +1,13 @@
 import { ActionLink } from "./button";
 import { ContactBand, Eyebrow } from "./page-sections";
-import ufastMachine from "@/assets/ufast-machine-transparent.png";
+import ufastMachine from "/images/ufast-machine-transparent.png";
 
 const IMG = {
-  ufastHero: "/__l5e/assets-v1/5f00504a-b890-4273-9bed-1c287f8ec625/ufast-hero.png",
-  eprHome: "/__l5e/assets-v1/2aa938a8-3395-46bf-9eb4-829c5e74748f/pulsed-epr-home.png",
-  eprHero: "/__l5e/assets-v1/16a23f97-bdb3-46b8-a8dd-f6f65acb6cd8/pulsed-epr-hero.png",
-  hexHome: "/__l5e/assets-v1/55c4db38-4132-4d41-a344-185b543d2fe6/hex-home.png",
-  hexHero: "/__l5e/assets-v1/2fea3731-45a8-472e-b8fe-c525d99e218a/hex-hero.png",
+  ufastHero: "/images/ufast-hero.png",
+  eprHome: "/images/pulsed-epr-home.png",
+  eprHero: "/images/pulsed-epr-hero.png",
+  hexHome: "/images/hex-home.png",
+  hexHero: "/images/hex-hero.png",
 };
 
 function Hero({ eyebrow, title, intro, image, alt }: { eyebrow: string; title: string; intro: string; image: string; alt: string }) {
