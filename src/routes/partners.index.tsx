@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/image-33.png.asset.json";
+const heroImg = "/images/image-33.png";
 import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
 import { images, partners } from "@/lib/site-data";
 import { seo } from "@/lib/seo";
@@ -8,7 +8,7 @@ export const Route = createFileRoute("/partners/")({
   head: () => seo("Partners — Technology Without Borders | NB Instrument", "The international technology companies NB Instrument represents in India, across deposition, spectroscopy, analytical instrumentation, vacuum and nanotechnology.", "/partners"),
   component: () => (
     <main>
-      <PageHero eyebrow="Partners" title="Technology without borders." intro="Specialised manufacturers from Europe, North America, Israel and Japan — connected to India's research ecosystem through one technical partner." image={heroImg.url} />
+      <PageHero eyebrow="Partners" title="Technology without borders." intro="Specialised manufacturers from Europe, North America, Israel and Japan — connected to India's research ecosystem through one technical partner." image={heroImg} />
       <section className="section">
         <div className="container">
           <div className="section-heading split">
