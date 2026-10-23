@@ -189,19 +189,24 @@ export function HexPage() {
       <section className="pd-section grey">
         <div className="container">
           <div className="pd-head" data-reveal><Eyebrow>Source modules</Eyebrow><h2>Choose your deposition techniques.</h2></div>
-          <div className="pd-gallery">
+          <div className="source-module-grid">
             {[
-              ["FISSION", "Magnetron sputtering — 2\"–3\" targets, DC / RF / HiPIMS / pulsed-DC.", "https://korvustech.com/wp-content/uploads/2024/10/Magnetron-Sputtering-Scource.webp"],
-              ["TAU", "Electron-beam evaporation with sub-monolayer control.", "https://korvustech.com/wp-content/uploads/2024/10/electron-beam-evaporation.jpg"],
-              ["ORCA", "Low-temperature evaporation, 50–600 °C, for organics.", "https://korvustech.com/wp-content/uploads/2024/10/low-temperature-evaporation.webp"],
-            ].map(([n, d, src]) => (
-              <figure key={n} className="pd-figure" data-reveal="image" style={{ aspectRatio: "auto", background: "transparent" }}>
-                <img src={src} alt={`${n} source module`} loading="lazy" style={{ aspectRatio: "4/3" }} />
-                <figcaption><strong style={{ color: "var(--ink)", fontSize: "1.1rem" }}>{n}</strong><br />{d}</figcaption>
-              </figure>
+              { name: "FISSION — Magnetron Sputtering Source", image: "/images/korvus-fission-module.png", alt: "Korvus FISSION magnetron sputtering source", description: "For 2\", 3\" and 4\" targets, with DC, RF, HiPIMS and pulsed-DC sputtering options.", href: "https://korvustech.com/magnetron-sputtering-system/" },
+              { name: "ORCA — Low Temperature Evaporation", image: "/images/korvus-orca-module.png", alt: "Korvus ORCA low-temperature evaporation source", description: "Precise organic evaporation from 50–600 °C, with glovebox integration available for the HEX Series.", href: "https://korvustech.com/organic-thermal-evaporation/" },
+              { name: "TAU — Electron Beam Evaporation", image: "/images/korvus-tau-module.png", alt: "Korvus TAU electron-beam evaporation source", description: "High-accuracy, sub-monolayer evaporation with four material pockets for co-deposition.", href: "https://korvustech.com/e-beam-evaporation/" },
+              { name: "TES — Thermal Boat Evaporation", image: "/images/korvus-tes-module.png", alt: "Korvus TES thermal boat evaporation source", description: "A robust, cost-effective thermal boat source for depositing standard metals.", href: "https://korvustech.com/pvd-thermal-evaporation/" },
+            ].map((module) => (
+              <article key={module.name} className="source-module-card" data-reveal="image">
+                <div className="source-module-thumb"><img src={module.image} alt={module.alt} loading="lazy" width="300" height="300" /></div>
+                <div className="source-module-copy">
+                  <h3>{module.name}</h3>
+                  <p>{module.description}</p>
+                  <a className="text-link" href={module.href} target="_blank" rel="noopener noreferrer">Read more <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
             ))}
           </div>
-          <p className="pd-note">Also available: TES thermal boat evaporation. Module images: Korvus Technology.</p>
+          <p className="pd-note">Module names, descriptions and images: Korvus Technology.</p>
         </div>
       </section>
       <section className="pd-section">
