@@ -21,11 +21,7 @@ const category42 = "/images/image-42.png";
 const category43 = "/images/image-43.png";
 const vacuumApplication = "/images/image-44.png";
 const energyApplication = "/images/image-45.png";
-/**
- * Photography supplied by NB Instrument, served from the project asset store.
- * Pointer files: src/assets/nb-hero-lab.webp.asset.json
- *                src/assets/nb-partner-map.webp.asset.json
- */
+/** Site photography is served locally from public/images. */
 const labImage = "/images/nb-hero-lab.webp";
 const partnerMapImage = "/images/nb-partner-map.webp";
 

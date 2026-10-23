@@ -1,5 +1,7 @@
+const SITE_URL = "https://advanced-research-hub.vercel.app";
+
 export function seo(title: string, description: string, path?: string) {
-  const url = path;
+  const url = path ? new URL(path, SITE_URL).toString() : undefined;
   return {
     meta: [
       { title },

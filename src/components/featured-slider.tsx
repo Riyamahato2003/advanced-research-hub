@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import korvusVideo from "@/assets/kORVUS_VIDEO.mp4.asset.json";
-import saldVideo from "@/assets/SALD.mp4.asset.json";
-import teerVideo from "@/assets/TEER.mp4.asset.json";
-
 const slides = [
-  { id: "korvus", video: korvusVideo.url, title: "KORVUS TECHNOLOGY", sub: "Technology that evolves with research.", text: "Configurable thin-film deposition systems built for advanced materials, semiconductor, photovoltaic, optical and nanomaterials research.", bullets: ["Modular by design", "Multiple deposition techniques", "Research-ready platforms"], cta: "Explore Korvus Technology", href: "https://korvustech.com/" },
-  { id: "sald", video: saldVideo.url, title: "SALD", sub: "Atomic precision. Built for scale.", text: "Spatial Atomic Layer Deposition technology for high-quality conformal coatings, combining atomic-level control with high-throughput, large-area manufacturing.", bullets: ["Spatial ALD technology", "Built for high throughput", "Enabling next-generation industries"], cta: "Explore SALD", href: "https://spatialald.com/" },
-  { id: "teer", video: teerVideo.url, title: "TEER COATINGS", sub: "Advanced surface engineering for demanding applications.", text: "Teer Coatings develops coating systems and surface technologies spanning industrial manufacturing, minting, advanced materials and research applications.", bullets: ["Industrial & Minting Systems", "Advanced Materials & Research", "Bespoke Engineering"], cta: "Explore Teer Coatings", href: "https://www.teercoatings.co.uk/" },
+  { id: "korvus", video: "/videos/korvus-technology.mp4", title: "KORVUS TECHNOLOGY", sub: "Technology that evolves with research.", text: "Configurable thin-film deposition systems built for advanced materials, semiconductor, photovoltaic, optical and nanomaterials research.", bullets: ["Modular by design", "Multiple deposition techniques", "Research-ready platforms"], cta: "Explore Korvus Technology", href: "https://korvustech.com/" },
+  { id: "sald", video: "/videos/sald.mp4", title: "SALD", sub: "Atomic precision. Built for scale.", text: "Spatial Atomic Layer Deposition technology for high-quality conformal coatings, combining atomic-level control with high-throughput, large-area manufacturing.", bullets: ["Spatial ALD technology", "Built for high throughput", "Enabling next-generation industries"], cta: "Explore SALD", href: "https://spatialald.com/" },
+  { id: "teer", video: "/videos/teer-coatings.mp4", title: "TEER COATINGS", sub: "Advanced surface engineering for demanding applications.", text: "Teer Coatings develops coating systems and surface technologies spanning industrial manufacturing, minting, advanced materials and research applications.", bullets: ["Industrial & Minting Systems", "Advanced Materials & Research", "Bespoke Engineering"], cta: "Explore Teer Coatings", href: "https://www.teercoatings.co.uk/" },
 ];
 const DURATION = 9000;
 
