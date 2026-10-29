@@ -323,7 +323,8 @@
 .partner-row h3 { margin: 2.8rem 0 .5rem; font-size: 1.55rem; }
 .partner-row p { color: var(--steel); font-size: .82rem; }
 .partner-row:hover p { color: color-mix(in oklch,var(--paper) 65%,transparent); }
-.about-hero .page-hero > img { filter: blur(3px) brightness(.72); transform: scale(1.015); }
+.about-hero .page-hero > img { filter: blur(34px) brightness(.68) saturate(.84); animation: about-hero-scale 1.6s var(--ease) both; }
+@keyframes about-hero-scale { from { opacity: .45; transform: scale(1.17); } to { opacity: 1; transform: scale(1.14); } }
 .about-intro { display: grid; grid-template-columns: minmax(16rem,4fr) minmax(0,7fr); gap: clamp(3rem,8vw,9rem); align-items: start; }
 .founder-portrait { margin: 0; border: 1px solid var(--line); padding: .8rem; }
 .founder-portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%; }
