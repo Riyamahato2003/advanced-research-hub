@@ -3,7 +3,7 @@ import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
 const aboutHero = "/images/image-46.png";
 const founder = "/images/image-26.png";
 const training = "/images/image-27.png";
-const partnership = "/images/image-35.png";
+const partnership = "/images/about-partner-visits-2026.jpg";
 import { seo } from "@/lib/seo";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -36,7 +36,7 @@ function AboutPage() {
       </section>
       <section className="section">
         <div className="container about-closing with-image">
-          <figure className="closing-frame" data-reveal="image"><img src={partnership} alt="NB Instrument engineers working with international technology partners" loading="lazy" /></figure>
+          <figure className="closing-frame" data-reveal="image"><img src={partnership} alt="A collage of NB Instrument’s meetings with research institutions and technology partners in India" loading="lazy" width="1024" height="1339" /></figure>
           <div data-reveal>
           <h2>Built around long-term technical partnerships.</h2>
           <p>Our partnerships span specialised manufacturers across Europe, the UK, Israel, Japan, Korea and other technology hubs. We work with each partner closely to bring technologies that solve real problems in research, manufacturing and industrial development.</p>
