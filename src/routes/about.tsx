@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, ContactBand, Eyebrow } from "@/components/page-sections";
-const aboutHero = "/images/image-46.png";
+const aboutHero = "/images/about-hero-amber.png";
 const founder = "/images/image-26.png";
 const training = "/images/image-27.png";
 const partnership = "/images/about-partner-visits-2026.jpg";
